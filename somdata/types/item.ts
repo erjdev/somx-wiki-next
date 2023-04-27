@@ -1,4 +1,5 @@
-import { SomClass, SomObject, SomStats } from "./base-data";
+import { SomObject, SomStats } from "./base-data";
+import { SomClass } from "./classes";
 
 export type SomEquippableItemBase = SomObject & {
   durability?: number;
