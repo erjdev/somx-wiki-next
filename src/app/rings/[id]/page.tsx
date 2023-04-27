@@ -1,14 +1,12 @@
 import { SomRing } from "../../../../somdata/types/item";
 
-async function getRingAsync(): Promise<SomRing> {
-  const res = await fetch('https://api.example.com/...');
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
-  return res.json();
+async function getRingAsync(ringId: string): Promise<SomRing> {
+  const res = await fetch(`/api/rings/${ringId}`);
+  return res.json() as unknown as SomRing;
 }
 
 export default async function RingPage({ params }: { params: { id: string } }) {
-  const ring = await getRingAsync();
+  const ring = await getRingAsync(params.id);
 
   return (
     <div>
