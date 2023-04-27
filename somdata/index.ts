@@ -13,7 +13,7 @@ import { ranks } from "./ranks";
 import { SomDatabase } from "./types/base-data";
 
 export const SomData: SomDatabase = {
-  armors,
+  armor: armors,
   boots,
   helmets,
   necks,

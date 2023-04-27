@@ -11,7 +11,6 @@ export default function RingPage(props: { ring?: SomRing }) {
 }
 
 export async function generateStaticParams({ params }: { params: { id: string } }) {
-  console.log("Checking SomData.rings from available ", SomData.rings.length, "; checking for ", params.id);
   console.log(JSON.stringify(SomData.rings));
   const ring = SomData.rings.find((ring) => ring.id === params.id);
   return {

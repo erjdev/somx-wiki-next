@@ -6,7 +6,7 @@ import { SomSpellData } from './spell';
 
 export type SomDatabase = {
   // Equippable Items
-  armors: SomArmor[];
+  armor: SomArmor[];
   boots: SomBoot[];
   helmets: SomHelmet[];
   necks: SomNeck[];
