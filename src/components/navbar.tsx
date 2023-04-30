@@ -32,8 +32,8 @@ const NavLinkList: React.FC<React.PropsWithChildren> = ({ children }) =>
   </ul>;
 
 const NavLinkListItem: React.FC<React.PropsWithChildren<{href: string}>> = ({ href, children }) =>
-  <li className="opacity-80 scale-100 hover:opacity-100 hover:underline decoration-blue-700 hover:scale-110 underline-offset-4 transition">
-    <Link href={href}>
+  <li className="opacity-80 scale-100 hover:opacity-100 hover:underline hover:scale-110 underline-offset-4 transition">
+    <Link className="decoration-blue-700" href={href}>
       {children}
     </Link>
   </li>;
