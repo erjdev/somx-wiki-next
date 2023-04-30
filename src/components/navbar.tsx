@@ -38,5 +38,4 @@ const NavLinkListItem: React.FC<React.PropsWithChildren<{href: string}>> = ({ hr
     </Link>
   </li>;
 
-
 export default Navbar;
