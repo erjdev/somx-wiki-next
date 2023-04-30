@@ -16,4 +16,18 @@ export const rings: SomRing[] = [
       health: -250,
     }
   },
+  {
+    id: "ring-aros",
+    name: "Accursed Ring of Strength",
+    imageUrl: "/pictures/item103.png",
+    unique: true,
+    description: "A ring that increases the power of strength.",
+    requiredStats: {
+      level: 500,
+    },
+    benefitStats: {
+      strength: 400,
+      health: -800,
+    }
+  },
 ];
