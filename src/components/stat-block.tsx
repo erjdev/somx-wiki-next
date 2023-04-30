@@ -9,7 +9,7 @@ export const StatsBlock = ({ title, statBlock }: { statBlock: SomStats, title?: 
   return (
     <div className="flex flex-col p-4 gap-2">
       <div className="flex items-center gap-2">
-        <h2 className="text-xl">{title ?? 'Stats'}</h2>
+        <p className="text-xl">{title ?? 'Stats'}</p>
       </div>
 
       <div className="grid grid-cols-2 gap-2">

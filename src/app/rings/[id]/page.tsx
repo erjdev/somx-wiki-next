@@ -2,7 +2,7 @@ import { StatsBlock } from "@/components/stat-block";
 import { SomRing } from "../../../../somdata/types/item";
 
 async function getRingAsync(ringId: string): Promise<SomRing> {
-  const res = await fetch(`http://localhost:3000/api/rings/${ringId}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/rings/${ringId}`);
   return res.json() as unknown as SomRing;
 }
 
