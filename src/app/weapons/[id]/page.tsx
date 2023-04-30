@@ -1,4 +1,3 @@
-import { StatsBlock } from "@/components/stat-block";
 import { SomWeapon } from "../../../../somdata/types/item";
 import Weapon from "@/components/weapon";
 

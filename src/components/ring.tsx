@@ -1,9 +1,12 @@
 import React from 'react';
 import { SomRing } from '../../somdata/types/item';
 import { StatsBlock } from './stat-block';
+import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
 const Ring: React.FC<{ ring: SomRing }> = ({ ring }) => {
+  if (!ring) notFound();
+
   return (
     <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg">
       <div className="flex items-center gap-4 flex-grow-0">
