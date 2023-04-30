@@ -1,6 +1,5 @@
 import { SomStats } from "../../somdata/types/base-data";
 
-
 const StatIcon: React.FC<{positive: boolean}> = ({ positive }) => {
   if (!positive) {
     return (
@@ -26,7 +25,7 @@ export const StatsBlock = ({ title, statBlock }: { statBlock: SomStats, title?: 
   const negativeColorClass = "text-red-300";
 
   return (
-    <div className="flex flex-col gap-2 max-w-sm">
+    <div className="flex flex-col gap-2 max-w-xs">
       <div className="flex items-center gap-2">
         <p className="text-md tracking-wide opacity-80">{title ?? 'Stats'}</p>
       </div>

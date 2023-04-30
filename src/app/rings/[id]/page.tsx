@@ -1,6 +1,15 @@
 import { StatsBlock } from "@/components/stat-block";
 import { SomRing } from "../../../../somdata/types/item";
 
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const ring = await getRingAsync(params.id);
+
+  return {
+    title: `SoMX Wiki - Rings - ${ring.name}`,
+    description: ring.description,
+  }
+}
+
 async function getRingAsync(ringId: string): Promise<SomRing> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/rings/${ringId}`);
   return res.json() as unknown as SomRing;
@@ -11,7 +20,7 @@ export default async function RingPage({ params }: { params: { id: string } }) {
 
   return (
     <div className="flex flex-col mx-auto p-4 gap-2 max-w-xl">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-4">
         <img className="w-12 h-12" src={ring.imageUrl} alt={ring.name} />
         <div className="flex flex-col gap-1">
           <h2 className="text-xl underline underline-offset-4 decoration-blue-700">{ring.name}</h2>
