@@ -4,7 +4,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <nav className="flex items-center gap-4 max-w-4xl">
-      <Link href="/" className="text-2xl font-bold tracking-widest mx-4 flex-shrink-0 decoration-blue-700 border-b-4 border-blue-700">SoMX Wiki</Link>
+      <NavLinkLogo />
       <NavLinkList>
         <NavLinkListItem href="/weapons">Weapons</NavLinkListItem>
         <NavLinkListItem href="/armor">Armor</NavLinkListItem>
@@ -37,5 +37,8 @@ const NavLinkListItem: React.FC<React.PropsWithChildren<{href: string}>> = ({ hr
       {children}
     </Link>
   </li>;
+
+const NavLinkLogo: React.FC = () =>
+  <Link href="/" className="text-2xl font-bold tracking-widest mx-4 flex-shrink-0 decoration-blue-700 border-b-4 border-blue-700">SoMX Wiki</Link>;
 
 export default Navbar;

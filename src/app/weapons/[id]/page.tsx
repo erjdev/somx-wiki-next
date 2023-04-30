@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { SomWeapon } from "../../../../somdata/types/item";
 import Weapon from "@/components/weapon";
 
@@ -15,7 +16,9 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 
 async function getWeaponAsync(weaponId: string): Promise<SomWeapon> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/weapons/${weaponId}`);
-  return res.json() as unknown as SomWeapon;
+  const resSomWeapon = res.json() as unknown as SomWeapon;
+  if (!resSomWeapon?.name) notFound();
+  return resSomWeapon;
 }
 
 export default async function WeaponPage({ params }: { params: { id: string } }) {
