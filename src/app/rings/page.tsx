@@ -15,9 +15,7 @@ export default async function RingsPage() {
   const rings = await getRingsAsync();
   return (
     <div className="flex flex-col gap-4">
-      {rings.map((ring) => {
-        return <Ring ring={ring} key={ring.name} />
-      })}
+      {rings.map((ring) => <Ring ring={ring} key={ring.name} />)}
     </div>
   );
 }

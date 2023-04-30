@@ -11,7 +11,7 @@ async function getWeaponsAsync(): Promise<SomWeapon[]> {
   return res.json() as unknown as SomWeapon[];
 }
 
-export default async function RingsPage() {
+export default async function WeaponsPage() {
   const weapons = await getWeaponsAsync();
   return (
     <div className="flex flex-col gap-4">

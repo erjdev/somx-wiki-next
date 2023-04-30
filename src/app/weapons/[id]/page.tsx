@@ -1,6 +1,5 @@
 import { StatsBlock } from "@/components/stat-block";
 import { SomWeapon } from "../../../../somdata/types/item";
-import Ring from "@/components/ring";
 import Weapon from "@/components/weapon";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
