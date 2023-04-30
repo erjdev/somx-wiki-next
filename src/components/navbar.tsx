@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react'
+import React from 'react';
 
 const Navbar = () => {
   return (
@@ -39,6 +39,6 @@ const NavLinkListItem: React.FC<React.PropsWithChildren<{href: string}>> = ({ hr
   </li>;
 
 const NavLinkLogo: React.FC = () =>
-  <Link href="/" className="text-2xl font-bold tracking-widest mx-4 flex-shrink-0 decoration-blue-700 border-b-4 border-blue-700">SoMX Wiki</Link>;
+  <Link href="/" className="text-2xl font-bold tracking-widest mx-4 flex-shrink-0 border-b-4 border-blue-700">SoMX Wiki</Link>;
 
 export default Navbar;

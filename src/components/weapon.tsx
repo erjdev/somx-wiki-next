@@ -14,7 +14,7 @@ const Weapon: React.FC<{ weapon: SomWeapon }> = ({ weapon: weapon }) => {
       <Link href={`/weapons/${weapon.id}`} className="flex items-center gap-4 flex-grow-0 rounded-lg border-x-2 border-transparent group hover:border-blue-700">
         <img className="w-12 h-12" src={weapon.imageUrl} alt={weapon.name} />
         <div className="flex flex-col gap-1">
-          <p className="text-xl group-hover:underline underline-offset-4 decoration-blue-700">{weapon.name}</p>
+          <p className="text-xl underline underline-offset-4 decoration-red-300 group-hover:decoration-blue-400">{weapon.name}</p>
           <div className="flex justify-between italic font-light gap-2 items-center text-sm opacity-80">
             {weapon.requiredStats?.level && <p className="p-1 pl-0">Level: {weapon.requiredStats?.level}</p>}
             {weapon.requiredStats?.strength && <p className="p-1 pl-0 text-red-300">
