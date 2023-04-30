@@ -1,5 +1,5 @@
-import React from 'react'
-import { SomRing } from '../../somdata/types/item'
+import React from 'react';
+import { SomRing } from '../../somdata/types/item';
 import { StatsBlock } from './stat-block';
 import Link from 'next/link';
 
@@ -13,7 +13,7 @@ const Ring: React.FC<{ ring: SomRing }> = ({ ring }) => {
             <p className="text-xl underline underline-offset-4 decoration-blue-700">{ring.name}</p>
           </Link>
           <div className="flex justify-between italic font-light gap-2 items-center text-sm">
-            {ring.requiredStats?.level && <p className="opacity-80 p-1 pl-0">Required Level: {ring.requiredStats?.level}</p>}
+            {ring.requiredStats?.level && <p className="opacity-80 p-1 pl-0">Level: {ring.requiredStats?.level}</p>}
             {ring.unique && <p className="rounded-full bg-slate-800 px-3 tracking-wider text-sm opacity-80">Unique</p>}
           </div>
         </div>
@@ -28,7 +28,7 @@ const Ring: React.FC<{ ring: SomRing }> = ({ ring }) => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Ring;
