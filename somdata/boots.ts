@@ -1,6 +1,6 @@
 import { SomBoot } from "./types/item";
 
-export const boots: SomBoot[] = [
+const unsortedBoots: SomBoot[] = [
   {
     id: "titanium-tetra", // 626
     name: "Titanium Tetra Boots",
@@ -23,4 +23,12 @@ export const boots: SomBoot[] = [
     imageUrl: "/pictures/item647.png",
     durability: 550,
   },
-].sort((a, b) => a.durability - b.durability);
+]
+
+export const boots = unsortedBoots.sort((a, b) => {
+  let ret = (a.durability ?? 0) - (b.durability ?? 0);
+  if (ret === 0) {
+    ret = a.name.localeCompare(b.name);
+  }
+  return ret;
+});

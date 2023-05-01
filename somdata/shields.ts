@@ -1,6 +1,6 @@
 import { SomShield } from "./types/item";
 
-export const shields: SomShield[] = [
+const unsortedShields: SomShield[] = [
   {
     id: "wooden", // 5
     name: "Wooden Shield",
@@ -191,3 +191,11 @@ export const shields: SomShield[] = [
     },
   },
 ];
+
+export const shields = unsortedShields.sort((a, b) => {
+  let ret = a.blockPercent - b.blockPercent;
+  if (ret === 0) {
+    ret = a.name.localeCompare(b.name);
+  }
+  return ret;
+});

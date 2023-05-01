@@ -1,11 +1,11 @@
 import { SomClass } from "./types/classes";
 import { SomRing } from "./types/item";
 
-export const rings: SomRing[] = [
+const unsortedRings: SomRing[] = [
   {
     id: "trinity", // 877
     name: "Trinity Ring",
-    description: "A ring forged from smelted minerals obtained from Tetra.  The ring has been enchanted to turn a player's sprite into a Trinity blade.  How firce is that?!  Yeah, not very fierce... but a floating sword!",
+    description: "A ring forged from smelted minerals obtained from Tetra.  The ring has been enchanted to turn a player's sprite into a Trinity blade.  How fierce is that?!  Yeah, not very fierce... but a floating sword!",
     imageUrl: "/pictures/item294.png",
     unique: true,
     requiredStats: { level: 1 },
@@ -83,7 +83,7 @@ export const rings: SomRing[] = [
   {
     id: "brod", // 186
     name: "Basic Ring of Defiance",
-    description: "You feel slightly tougher while wearing this odd ring.  For some reason, you feel like this ring is a key to something great.",
+    description: "You feel slightly tougher while wearing this odd ring.  You feel like this ring is a key to something great.",
     imageUrl: "/pictures/item458.png",
     unique: true,
     requiredStats: { level: 5 },
@@ -684,9 +684,13 @@ export const rings: SomRing[] = [
       speed: -500,
     },
   },
-].sort((a, b) => {
+];
+
+export const rings = unsortedRings.sort((a, b) => {
   // Sort by level then name
-  let ret = a.requiredStats.level - b.requiredStats.level;
-  if (ret === 0) ret = a.name.localeCompare(b.name);
+  let ret = (a.requiredStats?.level ?? 0) - (b.requiredStats?.level ?? 0);
+  if (ret === 0) {
+    ret = a.name.localeCompare(b.name);
+  }
   return ret;
 });
