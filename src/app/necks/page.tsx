@@ -14,7 +14,7 @@ async function getNecksAsync(): Promise<SomNeck[]> {
 export default async function NecksPage() {
   const necks = await getNecksAsync();
   return (
-    <div className="w-full grid grid-cols-3 gap-4">
+    <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
       {necks.map((neck) => <Neck neck={neck} key={neck.name} />)}
     </div>
   );

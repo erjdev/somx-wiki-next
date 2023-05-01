@@ -1,10 +1,10 @@
 import React from 'react';
-import { SomWeapon } from '../../somdata/types/item';
+import { SomNeck } from '../../somdata/types/item';
 import { StatsBlock } from './stat-block';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
-const Neck: React.FC<{ neck: SomWeapon }> = ({ neck }) => {
+const Neck: React.FC<{ neck: SomNeck }> = ({ neck }) => {
   if (!neck) notFound();
 
   return (
@@ -28,6 +28,7 @@ const Neck: React.FC<{ neck: SomWeapon }> = ({ neck }) => {
           </div>
         )}
         {neck.description && <p className="flex-wrap">{neck.description}</p>}
+        {neck.showsHealth && <p className="p-2 rounded-full bg-white/10">Casts Oracle</p>}
         {neck.benefitStats && <div className="flex flex-col px-2 gap-3 flex-wrap">
           <StatsBlock statBlock={neck.benefitStats} title="Bonuses / Penalties" showIcons />
         </div>}

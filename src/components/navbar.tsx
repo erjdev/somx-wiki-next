@@ -3,7 +3,7 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center gap-4 max-w-4xl">
+    <nav className="flex items-center gap-4 justify-between">
       <NavLinkLogo />
       <NavLinkList>
         <NavLinkListItem href="/weapons">Weapons</NavLinkListItem>
@@ -27,7 +27,7 @@ const Navbar = () => {
 }
 
 const NavLinkList: React.FC<React.PropsWithChildren> = ({ children }) =>
-  <ul className="hidden md:flex items-center gap-4 p-4 text-sm">
+  <ul className="hidden sm:flex flex-wrap lg:flex-nowrap items-center gap-4 p-4 text-sm">
     {children}
   </ul>;
 

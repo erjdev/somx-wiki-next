@@ -14,7 +14,7 @@ async function getHelmetsAsync(): Promise<SomHelmet[]> {
 export default async function HelmetsPage() {
   const helmets = await getHelmetsAsync();
   return (
-    <div className="w-full grid grid-cols-3 gap-4">
+    <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
       {helmets.map((helmet) => <Helmet helmet={helmet} key={helmet.name} />)}
     </div>
   );

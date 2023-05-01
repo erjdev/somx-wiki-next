@@ -7,6 +7,9 @@ export type SomEquippableItemBase = SomObject & {
   requiredStats?: SomStats;
   benefitStats?: SomStats;
   availableClasses?: SomClass[];
+  bindOnEquip?: boolean;
+  bindOnPickup?: boolean;
+  unique?: boolean;
 
   // Related items, npcs, quests, etc are referenced by id and type
   // such that we know which area to link to and under what id
@@ -20,8 +23,7 @@ export type SomNeck = SomEquippableItemBase & {
   showsHealth?: boolean;
 };
 export type SomRing = SomEquippableItemBase & {
-  unique?: boolean;
-  bound?: boolean;
+  showsHealth?: boolean;
 };
 export type SomShield = SomEquippableItemBase & {
   durability: number;
