@@ -105,7 +105,7 @@ export const rings: SomRing[] = [
   {
     id: "rol", // 355
     name: "Ring of Life",
-    description: "When wearing this ring, you become transformed into a sea creature, giving you the ability to survive in deep water.",
+    description: "When wearing this ring, you become transformed into a sea creature, giving you the ability to survive in deep water. (Use in Tower)",
     imageUrl: "/pictures/item458.png",
     unique: true,
     requiredStats: { level: 1 }
