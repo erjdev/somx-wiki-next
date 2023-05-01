@@ -14,7 +14,7 @@ export const rings: SomRing[] = [
     id: "merlin", // 1281
     name: "Merlin's Ring",
     description: "An incredibly rare and powerful magic ring.  It is said that Merlin himself crafted this ring, and that it is imbued with his magical powers.",
-    imageUrl: "/pictures/item294.png",
+    imageUrl: "/pictures/item307.png",
     unique: true,
     requiredStats: { level: 2 },
     benefitStats: {
@@ -317,6 +317,34 @@ export const rings: SomRing[] = [
     },
   },
   {
+    id: "majorrom", // 1700
+    name: "Major Ring of Mana",
+    description: "A mystical ring flowing with mana energy.",
+    imageUrl: "/pictures/item271.png",
+    unique: true,
+    availableClasses: [SomClass.MAGE, SomClass.ANGEL],
+    requiredStats: { level: 75 },
+    benefitStats: {
+      mana: 800,
+    },
+  },
+  {
+    id: "somx", // 2023
+    name: "Secrets of Mirage Ring",
+    description: "Forged from the remains of the 2020 New Year equipment.",
+    imageUrl: "/pictures/item222.png",
+    unique: true,
+    requiredStats: { level: 90 },
+    benefitStats: {
+      health: 100,
+      mana: 100,
+      strength: 100,
+      defense: 50,
+      magic: 200,
+      speed: 50,
+    },
+  },
+  {
     id: "asr", // 841
     name: "Azure Signet Ring",
     description: "A Signet Ring from the Azure Royal Family.",
@@ -367,6 +395,17 @@ export const rings: SomRing[] = [
     },
   },
   {
+    id: "enchroa", // 1606
+    name: "Enchanted Ring of Agility",
+    description: "Makes the wearer feel faster.",
+    imageUrl: "/pictures/item332.png",
+    unique: true,
+    requiredStats: { level: 150 },
+    benefitStats: {
+      speed: 35,
+    },
+  },
+  {
     id: "enhberserk", // 952
     name: "Enhanced Berserker's Ring",
     description: "This ring seems to be scarred to bits.  It's been through a lot, but it's still as strong as ever.",
@@ -404,6 +443,32 @@ export const rings: SomRing[] = [
       strength: 50,
       defense: 50,
       speed: 50,
+    },
+  },
+  {
+    id: "roodin", // 2983
+    name: "Ring of Odin",
+    description: "Odin's magical blessing flows throughout this ring.",
+    imageUrl: "/pictures/item295.png",
+    unique: true,
+    requiredStats: { level: 250 },
+    benefitStats: {
+      health: 200,
+      mana: 450,
+      magic: 180,
+    },
+  },
+  {
+    id: "rowyvrn", // 2984
+    name: "Ring of the Wyvern",
+    description: "Crafted from the magical feather of a Wyvern, this ring is said to enhance your magical prowess and dexterity.",
+    imageUrl: "/pictures/item314.png",
+    unique: true,
+    requiredStats: { level: 250 },
+    benefitStats: {
+      mana: 450,
+      magic: 180,
+      speed: 70,
     },
   },
   {
@@ -602,6 +667,21 @@ export const rings: SomRing[] = [
       health: 200,
       strength: 200,
       speed: 50,
+    },
+  },
+  {
+    id: "nether", // 1285
+    name: "Nether Ring",
+    description: "A mystical Nether Ring; can be traded for something more fitting.",
+    imageUrl: "/pictures/item717.png",
+    requiredStats: { level: 500 },
+    benefitStats: {
+      health: -1000,
+      mana: -500,
+      strength: -500,
+      defense: -500,
+      magic: -500,
+      speed: -500,
     },
   },
 ].sort((a, b) => {
