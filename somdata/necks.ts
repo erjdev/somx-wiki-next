@@ -2,7 +2,7 @@ import { SomNeck } from "./types/item";
 
 export const necks: SomNeck[] = [
   {
-    id: "hellfored-trinity-amulet",
+    id: "hellforged-trinity-amulet",
     name: "Hellforged Trinity Amulet",
     imageUrl: "/pictures/item143.png",
     requiredStats: {

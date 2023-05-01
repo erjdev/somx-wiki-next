@@ -11,7 +11,7 @@ const Helmet: React.FC<{ helmet: SomHelmet }> = ({ helmet }) => {
 
   return (
     <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg">
-      <Link href={`/helmet/${helmet.id}`} className="flex items-center gap-4 px-2 flex-grow-0 rounded-lg border-x-4 border-transparent group hover:border-blue-700">
+      <Link href={`/helmets/${helmet.id}`} className="flex items-center gap-4 px-2 flex-grow-0 rounded-lg border-x-4 border-transparent group hover:border-blue-700">
         <img className="w-12 h-12" src={helmet.imageUrl} alt={helmet.name} />
         <div className="flex flex-col gap-1">
           <p className="text-xl underline underline-offset-4 decoration-amber-500 group-hover:decoration-blue-400">{helmet.name}</p>

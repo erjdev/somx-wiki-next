@@ -9,7 +9,7 @@ export const metadata = {
 
 async function getWeaponsAsync(): Promise<SomWeapon[]> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/weapons`, { next: { revalidate: 60 }});
-  return res.json() as unknown as SomWeapon[];
+  return (await res.json()) as unknown as SomWeapon[];
 }
 
 export default async function WeaponsPage() {

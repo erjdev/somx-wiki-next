@@ -8,7 +8,7 @@ export const metadata = {
 
 async function getArmorAsync(): Promise<SomArmor[]> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/armor`, { next: { revalidate: 60 }});
-  return res.json() as unknown as SomArmor[];
+  return (await res.json()) as unknown as SomArmor[];
 }
 
 export default async function ArmorsPage() {
