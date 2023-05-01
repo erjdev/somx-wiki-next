@@ -21,6 +21,7 @@ export type SomNeck = SomEquippableItemBase & {
 };
 export type SomRing = SomEquippableItemBase & {
   unique?: boolean;
+  bound?: boolean;
 };
 export type SomShield = SomEquippableItemBase & {
   durability: number;

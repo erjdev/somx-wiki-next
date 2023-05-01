@@ -10,10 +10,10 @@ const Boot: React.FC<{ boot: SomBoot }> = ({ boot }) => {
   }
 
   return (
-    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg border-x-2 border-blue-900">
+    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg border-2 border-blue-900">
       <Link href={`/helmets/${boot.id}`} className="flex items-center gap-4 p-2 flex-grow-0 rounded-lg bg-white/5 hover:bg-white/10">
         <img className="w-12 h-12" src={boot.imageUrl} alt={boot.name} />
-        <div className="flex flex-col gap-1">
+        <div className="flex-grow flex flex-col gap-1">
           <p className="text-xl underline underline-offset-4 decoration-blue-700">{boot.name}</p>
           <div className="flex justify-between italic font-light gap-2 items-center text-sm opacity-80">
             {boot.requiredStats?.level && <p className="p-1 pl-0">Level {boot.requiredStats?.level}</p>}

@@ -10,10 +10,10 @@ const Armor: React.FC<{ armor: SomArmor }> = ({ armor }) => {
   }
 
   return (
-    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg border-x-2 border-slate-800">
+    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg border-2 border-slate-800">
       <Link href={`/armor/${armor.id}`} className="flex items-center gap-4 p-2 flex-grow-0 rounded-lg bg-white/5 hover:bg-white/10">
         <img className="w-12 h-12" src={armor.imageUrl} alt={armor.name} />
-        <div className="flex flex-col gap-1">
+        <div className="flex-grow flex flex-col gap-1">
           <p className="text-xl underline underline-offset-4 decoration-slate-500 group-hover:decoration-blue-400">{armor.name}</p>
           <div className="flex justify-between italic font-light gap-2 items-center text-sm opacity-80">
             {armor.requiredStats?.defense && <p className="p-1 pl-0 text-slate-500">
