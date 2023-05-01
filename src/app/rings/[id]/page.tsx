@@ -31,7 +31,7 @@ export default async function RingPage({ params }: { params: { id: string } }) {
         <span className="text-xs select-none">&gt;</span>
         <Link href={`/rings/${ring.id}`} className="underline-offset-2 decoration-blue-700 hover:underline">{ring.name}</Link>
       </p>
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-col md:flex-row gap-4">
         <Ring ring={ring} />
         <div className="">
           More details...
@@ -39,5 +39,4 @@ export default async function RingPage({ params }: { params: { id: string } }) {
       </div>
     </div>
   );
-  return <Ring ring={ring} />;
 }

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { SomShield } from "../../../../somdata/types/item";
-import Weapon from "@/components/weapon";
+import Shield from "@/components/shield";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const shield = await getShieldAsync(params.id);
@@ -23,5 +23,5 @@ async function getShieldAsync(id: string): Promise<SomShield> {
 
 export default async function ShieldPage({ params }: { params: { id: string } }) {
   const shield = await getShieldAsync(params.id);
-  return <Weapon weapon={shield} />;
+  return <Shield shield={shield} />;
 }

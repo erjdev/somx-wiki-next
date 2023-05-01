@@ -420,7 +420,7 @@ export const rings: SomRing[] = [
   {
     id: "glacrov", // 1071
     name: "Glacier Ring of Virtue",
-    description: "Forged from the iron taken from teh blood of Ezoria Tigers.",
+    description: "Forged from the iron taken from the blood of Ezoria Tigers.",
     imageUrl: "/pictures/item314.png",
     unique: true,
     requiredStats: { level: 200 },

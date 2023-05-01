@@ -26,7 +26,6 @@ export type SomRing = SomEquippableItemBase & {
   showsHealth?: boolean;
 };
 export type SomShield = SomEquippableItemBase & {
-  durability: number;
   blockPercent: number;
 };
 // Base type with one additional property

@@ -31,7 +31,7 @@ export default async function NeckPage({ params }: { params: { id: string } }) {
         <span className="text-xs select-none">&gt;</span>
         <Link href={`/necks/${neck.id}`} className="underline-offset-2 decoration-blue-700 hover:underline">{neck.name}</Link>
       </p>
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-col md:flex-row gap-2">
         <Neck neck={neck} />
         <div className="">
           More details...
