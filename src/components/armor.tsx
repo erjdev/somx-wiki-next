@@ -34,7 +34,7 @@ const Armor: React.FC<{ armor: SomArmor }> = ({ armor }) => {
         {armor.availableClasses && (
           <div className="flex flex-wrap gap-1 text-slate-500">
             <p>Usable by</p>
-            {armor.availableClasses.map(ac => <p className="px-3 text-slate-300 bg-white/10 rounded-full">{ac}</p>)}
+            {armor.availableClasses.map(ac => <p key={ac} className="px-3 text-slate-300 bg-white/10 rounded-full">{ac}</p>)}
           </div>
         )}
         {armor.description && <p className="flex-wrap">{armor.description}</p>}
