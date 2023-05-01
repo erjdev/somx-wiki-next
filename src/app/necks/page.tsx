@@ -7,7 +7,7 @@ export const metadata = {
 }
 
 async function getNecksAsync(): Promise<SomNeck[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/necks`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/necks`, { next: { revalidate: 60 }});
   return res.json() as unknown as SomNeck[];
 }
 

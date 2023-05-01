@@ -7,7 +7,7 @@ export const metadata = {
 }
 
 async function getRingsAsync(): Promise<SomRing[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/rings`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/rings`, { next: { revalidate: 60 }});
   return res.json() as unknown as SomRing[];
 }
 

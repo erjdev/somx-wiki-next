@@ -7,7 +7,7 @@ export const metadata = {
 }
 
 async function getShieldsAsync(): Promise<SomShield[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/shields`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/shields`, { next: { revalidate: 60 }});
   return res.json() as unknown as SomShield[];
 }
 

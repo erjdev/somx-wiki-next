@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { SomHelmet } from "../../../../somdata/types/item";
-import Weapon from "@/components/weapon";
+import Helmet from "@/components/helmet";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const helmet = await getHelmetAsync(params.id);
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 }
 
 async function getHelmetAsync(id: string): Promise<SomHelmet> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/helmets/${id}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/helmets/${id}`, { next: { revalidate: 60 }});
   const resSomHelmet = res.json() as unknown as SomHelmet;
   if (!resSomHelmet?.name) notFound();
   return resSomHelmet;
@@ -23,5 +23,5 @@ async function getHelmetAsync(id: string): Promise<SomHelmet> {
 
 export default async function HelmetPage({ params }: { params: { id: string } }) {
   const helmet = await getHelmetAsync(params.id);
-  return <Weapon weapon={helmet} />; // TODO: Helmet component
+  return <Helmet helmet={helmet} />;
 }

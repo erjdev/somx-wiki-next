@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 }
 
 async function getRingAsync(ringId: string): Promise<SomRing> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/rings/${ringId}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/rings/${ringId}`, { next: { revalidate: 60 }});
   const resSomRing = res.json() as unknown as SomRing;
   if (!resSomRing?.name) notFound();
   return resSomRing;

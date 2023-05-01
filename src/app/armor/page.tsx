@@ -1,5 +1,5 @@
+import Armor from "@/components/armor";
 import { SomArmor } from "../../../somdata/types/item";
-import Weapon from "@/components/weapon";
 
 export const metadata = {
   title: `SoMX Wiki - Armor`,
@@ -7,7 +7,7 @@ export const metadata = {
 }
 
 async function getArmorAsync(): Promise<SomArmor[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/armor`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/armor`, { next: { revalidate: 60 }});
   return res.json() as unknown as SomArmor[];
 }
 
@@ -15,7 +15,7 @@ export default async function ArmorsPage() {
   const armor = await getArmorAsync();
   return (
     <div className="flex flex-col gap-4">
-      {armor.map((weapon) => <Weapon weapon={weapon} key={weapon.name} />)}
+      {armor.map((armor) => <Armor armor={armor} key={armor.name} />)}
     </div>
   );
 }

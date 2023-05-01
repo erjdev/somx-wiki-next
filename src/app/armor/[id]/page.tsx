@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { SomArmor } from "../../../../somdata/types/item";
-import Weapon from "@/components/weapon";
+import Armor from "@/components/armor";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const armor = await getArmorAsync(params.id);
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 }
 
 async function getArmorAsync(id: string): Promise<SomArmor> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/armor/${id}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/armor/${id}`, { next: { revalidate: 60 }});
   const resSomArmor = res.json() as unknown as SomArmor;
   if (!resSomArmor?.name) notFound();
   return resSomArmor;
@@ -23,5 +23,5 @@ async function getArmorAsync(id: string): Promise<SomArmor> {
 
 export default async function ArmorPage({ params }: { params: { id: string } }) {
   const armor = await getArmorAsync(params.id);
-  return <Weapon weapon={armor} />;
+  return <Armor armor={armor} />;
 }

@@ -16,7 +16,7 @@ const StatIcon: React.FC<{positive: boolean}> = ({ positive }) => {
   )
 }
 
-export const StatsBlock = ({ title, statBlock }: { statBlock: SomStats, title?: string }) => {
+export const StatsBlock = ({ title, statBlock, showIcons }: { statBlock: SomStats, title?: string, showIcons?: boolean }) => {
   // Don't render anything if there are no stats
   if (!statBlock.health && !statBlock.mana && !statBlock.strength && !statBlock.defense && !statBlock.magic && !statBlock.speed)
     return null;
@@ -34,7 +34,7 @@ export const StatsBlock = ({ title, statBlock }: { statBlock: SomStats, title?: 
         {statBlock.health && (
           <>
             <p className={`flex gap-4 ${statBlock.health > 0 ? positiveColorClass : negativeColorClass}`}>
-              <StatIcon positive={statBlock.health > 0} />
+              {showIcons && <StatIcon positive={statBlock.health > 0} />}
               Health
             </p>
             <p className={`text-right ${statBlock.health > 0 ? positiveColorClass : negativeColorClass}`}>{statBlock.health}</p>
@@ -43,7 +43,7 @@ export const StatsBlock = ({ title, statBlock }: { statBlock: SomStats, title?: 
         {statBlock.mana && (
           <>
             <p className={`flex gap-4 ${statBlock.mana > 0 ? positiveColorClass : negativeColorClass}`}>
-              <StatIcon positive={statBlock.mana > 0} />
+              {showIcons && <StatIcon positive={statBlock.mana > 0} />}
               Mana
             </p>
             <p className={`text-right ${statBlock.mana > 0 ? positiveColorClass : negativeColorClass}`}>{statBlock.mana}</p>
@@ -52,7 +52,7 @@ export const StatsBlock = ({ title, statBlock }: { statBlock: SomStats, title?: 
         {statBlock.strength && (
           <>
             <p className={`flex gap-4 ${statBlock.strength > 0 ? positiveColorClass : negativeColorClass}`}>
-              <StatIcon positive={statBlock.strength > 0} />
+              {showIcons && <StatIcon positive={statBlock.strength > 0} />}
               Strength
             </p>
             <p className={`text-right ${statBlock.strength > 0 ? positiveColorClass : negativeColorClass}`}>{statBlock.strength}</p>
@@ -61,7 +61,7 @@ export const StatsBlock = ({ title, statBlock }: { statBlock: SomStats, title?: 
         {statBlock.defense && (
           <>
             <p className={`flex gap-4 ${statBlock.defense > 0 ? positiveColorClass : negativeColorClass}`}>
-              <StatIcon positive={statBlock.defense > 0} />
+              {showIcons && <StatIcon positive={statBlock.defense > 0} />}
               Defense
             </p>
             <p className={`text-right ${statBlock.defense > 0 ? positiveColorClass : negativeColorClass}`}>{statBlock.defense}</p>
@@ -70,7 +70,7 @@ export const StatsBlock = ({ title, statBlock }: { statBlock: SomStats, title?: 
         {statBlock.magic && (
           <>
             <p className={`flex gap-4 ${statBlock.magic > 0 ? positiveColorClass : negativeColorClass}`}>
-              <StatIcon positive={statBlock.magic > 0} />
+              {showIcons && <StatIcon positive={statBlock.magic > 0} />}
               Magic
             </p>
             <p className={`text-right ${statBlock.magic > 0 ? positiveColorClass : negativeColorClass}`}>{statBlock.magic}</p>
@@ -79,7 +79,7 @@ export const StatsBlock = ({ title, statBlock }: { statBlock: SomStats, title?: 
         {statBlock.speed && (
           <>
             <p className={`flex gap-4 ${statBlock.speed > 0 ? positiveColorClass : negativeColorClass}`}>
-              <StatIcon positive={statBlock.speed > 0} />
+              {showIcons && <StatIcon positive={statBlock.speed > 0} />}
               Speed
             </p>
             <p className={`text-right ${statBlock.speed > 0 ? positiveColorClass : negativeColorClass}`}>{statBlock.speed}</p>
