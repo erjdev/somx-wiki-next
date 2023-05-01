@@ -1,8 +1,8 @@
-import React from 'react'
-import { SomArmor } from '../../somdata/types/item'
-import { StatsBlock } from './stat-block';
+import React from 'react';
+import { SomArmor } from '../../somdata/types/item';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
+import EquippableItemDetails from './equippable-item-details';
+import EquippableItemLink from './equippable-item-link';
 
 const Armor: React.FC<{ armor: SomArmor }> = ({ armor }) => {
   if (!armor) {
@@ -11,7 +11,7 @@ const Armor: React.FC<{ armor: SomArmor }> = ({ armor }) => {
 
   return (
     <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg border-2 border-slate-800">
-      <Link href={`/armor/${armor.id}`} className="flex items-center gap-4 p-2 flex-grow-0 rounded-lg bg-white/5 hover:bg-white/10">
+      <EquippableItemLink href={`/armor/${armor.id}`}>
         <img className="w-12 h-12" src={armor.imageUrl} alt={armor.name} />
         <div className="flex-grow flex flex-col gap-1">
           <p className="text-xl underline underline-offset-4 decoration-slate-500 group-hover:decoration-blue-400">{armor.name}</p>
@@ -28,20 +28,9 @@ const Armor: React.FC<{ armor: SomArmor }> = ({ armor }) => {
             </p>}
           </div>
         </div>
-      </Link>
+      </EquippableItemLink>
 
-      <div className="flex flex-col px-2 gap-3">
-        {armor.availableClasses && (
-          <div className="flex flex-wrap gap-1 text-slate-500">
-            <p>Usable by</p>
-            {armor.availableClasses.map(ac => <p key={ac} className="px-3 text-slate-300 bg-white/10 rounded-full">{ac}</p>)}
-          </div>
-        )}
-        {armor.description && <p className="flex-wrap">{armor.description}</p>}
-        {armor.benefitStats && <div className="flex flex-col px-2 gap-3 flex-wrap">
-          <StatsBlock statBlock={armor.benefitStats} title="Bonuses / Penalties" showIcons />
-        </div>}
-      </div>
+      <EquippableItemDetails {...armor} />
     </div>
   )
 }

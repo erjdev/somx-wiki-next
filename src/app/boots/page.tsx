@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SomBoot } from "../../../somdata/types/item";
 import Boot from "@/components/boot";
 
@@ -14,8 +15,13 @@ async function getBootsAsync(): Promise<SomBoot[]> {
 export default async function RingsPage() {
   const boots = await getBootsAsync();
   return (
-    <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-      {boots.map((boot) => <Boot boot={boot} key={boot.name} />)}
+    <div>
+      <p className="flex space-x-2 items-center p-4">
+        <Link href="/boots" className="underline-offset-2 decoration-blue-700 hover:underline">Boots</Link>
+      </p>
+      <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+        {boots.map((boot) => <Boot boot={boot} key={boot.name} />)}
+      </div>
     </div>
   );
 }

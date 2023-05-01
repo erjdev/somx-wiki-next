@@ -15,12 +15,12 @@ const Navbar = () => {
         <NavLinkListItem href="/necks">Necks</NavLinkListItem>
       </NavLinkList>
       <NavLinkList>
-        <NavLinkListItem href="/items">Items</NavLinkListItem>
+        {/* <NavLinkListItem href="/items">Items</NavLinkListItem>
         <NavLinkListItem href="/quests">Quests</NavLinkListItem>
         <NavLinkListItem href="/locations">Locations</NavLinkListItem>
         <NavLinkListItem href="/ranks">Ranks</NavLinkListItem>
         <NavLinkListItem href="/monsters">Monsters</NavLinkListItem>
-        <NavLinkListItem href="/spells">Spells</NavLinkListItem>
+        <NavLinkListItem href="/spells">Spells</NavLinkListItem> */}
       </NavLinkList>
     </nav>
   )
