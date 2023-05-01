@@ -1,16 +1,16 @@
 import { SomStats } from "../../somdata/types/base-data";
 
-const StatIcon: React.FC<{positive: boolean}> = ({ positive }) => {
+const StatIcon: React.FC<{positive: boolean, className?: string}> = ({ positive, className = '' }) => {
   if (!positive) {
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={`w-6 h-6 ${className}`}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     )
   }
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className={`w-6 h-6 ${className}`}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>
   )
@@ -30,10 +30,10 @@ export const StatsBlock = ({ title, statBlock, showIcons }: { statBlock: SomStat
         <p className="text-md tracking-wide opacity-80">{title ?? 'Stats'}</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-2 gap-1 text-sm">
         {statBlock.health && (
           <>
-            <p className={`flex gap-4 ${statBlock.health > 0 ? positiveColorClass : negativeColorClass}`}>
+            <p className={`flex items-center gap-4 ${statBlock.health > 0 ? positiveColorClass : negativeColorClass}`}>
               {showIcons && <StatIcon positive={statBlock.health > 0} />}
               Health
             </p>
@@ -42,7 +42,7 @@ export const StatsBlock = ({ title, statBlock, showIcons }: { statBlock: SomStat
         )}
         {statBlock.mana && (
           <>
-            <p className={`flex gap-4 ${statBlock.mana > 0 ? positiveColorClass : negativeColorClass}`}>
+            <p className={`flex items-center gap-4 ${statBlock.mana > 0 ? positiveColorClass : negativeColorClass}`}>
               {showIcons && <StatIcon positive={statBlock.mana > 0} />}
               Mana
             </p>
@@ -51,7 +51,7 @@ export const StatsBlock = ({ title, statBlock, showIcons }: { statBlock: SomStat
         )}
         {statBlock.strength && (
           <>
-            <p className={`flex gap-4 ${statBlock.strength > 0 ? positiveColorClass : negativeColorClass}`}>
+            <p className={`flex items-center gap-4 ${statBlock.strength > 0 ? positiveColorClass : negativeColorClass}`}>
               {showIcons && <StatIcon positive={statBlock.strength > 0} />}
               Strength
             </p>
@@ -60,7 +60,7 @@ export const StatsBlock = ({ title, statBlock, showIcons }: { statBlock: SomStat
         )}
         {statBlock.defense && (
           <>
-            <p className={`flex gap-4 ${statBlock.defense > 0 ? positiveColorClass : negativeColorClass}`}>
+            <p className={`flex items-center gap-4 ${statBlock.defense > 0 ? positiveColorClass : negativeColorClass}`}>
               {showIcons && <StatIcon positive={statBlock.defense > 0} />}
               Defense
             </p>
@@ -69,7 +69,7 @@ export const StatsBlock = ({ title, statBlock, showIcons }: { statBlock: SomStat
         )}
         {statBlock.magic && (
           <>
-            <p className={`flex gap-4 ${statBlock.magic > 0 ? positiveColorClass : negativeColorClass}`}>
+            <p className={`flex items-center gap-4 ${statBlock.magic > 0 ? positiveColorClass : negativeColorClass}`}>
               {showIcons && <StatIcon positive={statBlock.magic > 0} />}
               Magic
             </p>
@@ -78,7 +78,7 @@ export const StatsBlock = ({ title, statBlock, showIcons }: { statBlock: SomStat
         )}
         {statBlock.speed && (
           <>
-            <p className={`flex gap-4 ${statBlock.speed > 0 ? positiveColorClass : negativeColorClass}`}>
+            <p className={`flex items-center gap-4 ${statBlock.speed > 0 ? positiveColorClass : negativeColorClass}`}>
               {showIcons && <StatIcon positive={statBlock.speed > 0} />}
               Speed
             </p>

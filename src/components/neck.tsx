@@ -8,8 +8,8 @@ const Neck: React.FC<{ neck: SomWeapon }> = ({ neck }) => {
   if (!neck) notFound();
 
   return (
-    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg">
-      <Link href={`/necks/${neck.id}`} className="flex items-center gap-4 px-2 flex-grow-0 rounded-lg border-x-4 border-transparent group hover:border-blue-700">
+    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg drop-shadow-lg shadow-slate-400 border-x-2 px-2 border-blue-900">
+      <Link href={`/necks/${neck.id}`} className="flex items-center gap-4 p-2 flex-grow-0 rounded-lg bg-white/5 hover:bg-white/10">
         <img className="w-12 h-12" src={neck.imageUrl} alt={neck.name} />
         <div className="flex flex-col gap-1">
           <p className="text-xl underline underline-offset-4 decoration-blue-700">{neck.name}</p>

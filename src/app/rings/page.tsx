@@ -14,7 +14,7 @@ async function getRingsAsync(): Promise<SomRing[]> {
 export default async function RingsPage() {
   const rings = await getRingsAsync();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="w-full grid grid-cols-3 gap-4">
       {rings.map((ring) => <Ring ring={ring} key={ring.name} />)}
     </div>
   );

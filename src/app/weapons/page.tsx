@@ -15,7 +15,7 @@ async function getWeaponsAsync(): Promise<SomWeapon[]> {
 export default async function WeaponsPage() {
   const weapons = await getWeaponsAsync();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="w-full grid grid-cols-3 gap-4">
       {weapons.map((weapon) => <Weapon weapon={weapon} key={weapon.name} />)}
     </div>
   );

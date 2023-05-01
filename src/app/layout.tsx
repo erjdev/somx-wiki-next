@@ -17,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-slate-950 text-slate-50`}>
-        <div className="max-w-7xl mx-auto">
+        <div className="min-h-screen flex flex-col max-w-7xl mx-auto">
           <Navbar />
-          {children}
+          <main className="flex-grow flex flex-col items-center justify-between p-8">
+            {children}
+          </main>
         </div>
       </body>
     </html>

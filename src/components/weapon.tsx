@@ -10,8 +10,8 @@ const Weapon: React.FC<{ weapon: SomWeapon }> = ({ weapon }) => {
   }
 
   return (
-    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg">
-      <Link href={`/weapons/${weapon.id}`} className="flex items-center gap-4 px-2 flex-grow-0 rounded-lg border-x-4 border-transparent group hover:border-blue-700">
+    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg drop-shadow-lg border-x-2 border-red-900">
+      <Link href={`/weapons/${weapon.id}`} className="flex items-center gap-4 p-2 flex-grow-0 rounded-lg bg-white/5 hover:bg-white/10">
         <img className="w-12 h-12" src={weapon.imageUrl} alt={weapon.name} />
         <div className="flex flex-col gap-1">
           <p className="text-xl underline underline-offset-4 decoration-red-500 group-hover:decoration-blue-400">{weapon.name}</p>

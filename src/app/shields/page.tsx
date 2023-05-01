@@ -14,7 +14,7 @@ async function getShieldsAsync(): Promise<SomShield[]> {
 export default async function ShieldsPage() {
   const shields = await getShieldsAsync();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="w-full grid grid-cols-3 gap-4">
       {shields.map((weapon) => <Weapon weapon={weapon} key={weapon.name} />)}
     </div>
   );

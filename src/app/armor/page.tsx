@@ -14,7 +14,7 @@ async function getArmorAsync(): Promise<SomArmor[]> {
 export default async function ArmorsPage() {
   const armor = await getArmorAsync();
   return (
-    <div className="flex flex-col gap-4">
+    <div className="w-full grid grid-cols-3 gap-4">
       {armor.map((armor) => <Armor armor={armor} key={armor.name} />)}
     </div>
   );
