@@ -34,7 +34,7 @@ const Weapon: React.FC<{ weapon: SomWeapon }> = ({ weapon }) => {
         {weapon.availableClasses && (
           <div className="flex flex-wrap gap-1 text-slate-500">
             <p>Usable by</p>
-            {weapon.availableClasses.map(ac => <p className="px-3 text-slate-300 bg-white/10 rounded-full">{ac}</p>)}
+            {weapon.availableClasses.map(ac => <p key={ac} className="px-3 text-slate-300 bg-white/10 rounded-full">{ac}</p>)}
           </div>
         )}
         {weapon.description && <p className="flex-wrap">{weapon.description}</p>}

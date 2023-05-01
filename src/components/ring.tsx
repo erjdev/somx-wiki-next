@@ -29,7 +29,7 @@ const Ring: React.FC<{ ring: SomRing }> = ({ ring }) => {
         {ring.availableClasses && (
           <div className="flex flex-wrap gap-1 text-slate-500 italic">
             <p>Usable by</p>
-            {ring.availableClasses.map(ac => <p className="px-3 text-slate-300 bg-blue-500/20 rounded-full">{ac}</p>)}
+            {ring.availableClasses.map(ac => <p key={ac} className="px-3 text-slate-300 bg-blue-500/20 rounded-full">{ac}</p>)}
           </div>
         )}
         {ring.description && <p className="flex-wrap">{ring.description}</p>}
