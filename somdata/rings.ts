@@ -3,7 +3,7 @@ import { SomRing } from "./types/item";
 
 export const rings: SomRing[] = [
   {
-    id: "trinity",
+    id: "trinity", // 877
     name: "Trinity Ring",
     description: "A ring forged from smelted minerals obtained from Tetra.  The ring has been enchanted to turn a player's sprite into a Trinity blade.  How firce is that?!  Yeah, not very fierce... but a floating sword!",
     imageUrl: "/pictures/item294.png",
@@ -11,6 +11,19 @@ export const rings: SomRing[] = [
     requiredStats: {
       level: 1,
     },
+  },
+  {
+    id: "plain", // 1080
+    name: "Plain Ring",
+    description: "A ring made from the remnants of a magical sword, granting a slight magical increase.",
+    imageUrl: "/pictures/item327.png",
+    requiredStats: {
+      level: 2,
+    },
+    benefitStats: {
+      magic: 4,
+    },
+    availableClasses: [SomClass.MAGE],
   },
   {
     id: "robos", // 934
@@ -40,7 +53,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "broh",
+    id: "broh", // 172
     name: "Basic Ring of Health",
     description: "A simple ring which seems to give its wearer a small boost of health.",
     imageUrl: "/pictures/item458.png",
@@ -52,7 +65,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "brod",
+    id: "brod", // 186
     name: "Basic Ring of Defiance",
     description: "You feel slightly tougher while wearing this odd ring.  For some reason, you feel like this ring is a key to something great.",
     imageUrl: "/pictures/item458.png",
@@ -65,7 +78,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "brom",
+    id: "brom", // 756
     name: "Basic Ring of Mana",
     description: "A ring that slightly increases the wearer's mana.",
     imageUrl: "/pictures/item458.png",
@@ -78,14 +91,14 @@ export const rings: SomRing[] = [
     }
   },
   {
-    id: "rol",
+    id: "rol", // 355
     name: "Ring of Life",
     description: "When wearing this ring, you become transformed into a sea creature, giving you the ability to survive in deep water.",
     imageUrl: "/pictures/item458.png",
     unique: true,
   },
   {
-    id: "engagement",
+    id: "engagement", // 491
     name: "Engagement Ring",
     imageUrl: "/pictures/item330.png",
     unique: true,
@@ -102,7 +115,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "rop",
+    id: "rop", // 613
     name: "Ring of Power",
     description: "A ring possessing mystical power.",
     imageUrl: "/pictures/item270.png",
@@ -114,7 +127,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "romight",
+    id: "romight", // 889
     name: "Ring of Might",
     description: "A ring possessing mystical defensive power.",
     imageUrl: "/pictures/item279.png",
@@ -126,7 +139,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "scorprepl",
+    id: "scorprepl", // 878
     name: "Scorpio's Ring Replica",
     description: "You must be a wealthy player to have one of these.  A replica of the mythical Scorpio's Ring; while it does not act as a magical shield, it does raise all stats. Slightly.",
     imageUrl: "/pictures/item222.png",
@@ -144,7 +157,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "diamond",
+    id: "diamond", // 876
     name: "Diamond Ring",
     description: "A ring with a beautiful diamond on it.  This ring symbolizes a promise of devotion and true love.",
     imageUrl: "/pictures/item330.png",
@@ -158,7 +171,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "mros",
+    id: "mros", // 670
     name: "Minor Ring of Strength",
     description: "A ring that slightly increases the muscle mass of the wearer.",
     imageUrl: "/pictures/item327.png",
@@ -170,7 +183,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "mrod",
+    id: "mrod", // 671
     name: "Minor Ring of Defense",
     description: "A ring that slightly increases the wearer's hardiness.",
     imageUrl: "/pictures/item327.png",
@@ -182,7 +195,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "mrom",
+    id: "mrom", // 672
     name: "Minor Ring of Magic",
     description: "A ring that slightly increases the power of magic.",
     imageUrl: "/pictures/item327.png",
@@ -194,7 +207,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "mrosp",
+    id: "mrosp", // 757
     name: "Minor Ring of Speed",
     description: "A ring that slightly increases the wearer's speed.",
     imageUrl: "/pictures/item327.png",
@@ -220,7 +233,7 @@ export const rings: SomRing[] = [
     availableClasses: [SomClass.MAGE, SomClass.ANGEL],
   },
   {
-    id: "modroh",
+    id: "modroh", // 674
     name: "Moderate Ring of Health",
     description: "A ring which seems to give its wearer a moderate boost of health.",
     imageUrl: "/pictures/item330.png",
@@ -232,7 +245,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "augros",
+    id: "augros", // 675
     name: "Augmented Ring of Strength",
     description: "A ring which seems to give its wearer a moderate boost of strength.",
     imageUrl: "/pictures/item98.png",
@@ -244,7 +257,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "augrod",
+    id: "augrod", // 676
     name: "Augmented Ring of Defense",
     description: "A ring which seems to give its wearer a moderate boost of defense.",
     imageUrl: "/pictures/item98.png",
@@ -256,7 +269,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "augrom",
+    id: "augrom", // 677
     name: "Augmented Ring of Magic",
     description: "A ring which seems to give its wearer a moderate boost of magic.",
     imageUrl: "/pictures/item98.png",
@@ -283,7 +296,7 @@ export const rings: SomRing[] = [
     availableClasses: [SomClass.MAGE, SomClass.ANGEL],
   },
   {
-    id: "nimros",
+    id: "nimros", // 678
     name: "Nimble Ring of Strength",
     description: "A ring which seems to make its wearer more strong and nimble.",
     imageUrl: "/pictures/item100.png",
@@ -297,7 +310,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "nimrod",
+    id: "nimrod", // 679
     name: "Nimble Ring of Defense",
     description: "A ring which seems to make its wearer more hardy and nimble.",
     imageUrl: "/pictures/item100.png",
@@ -311,7 +324,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "nimrom",
+    id: "nimrom", // 680
     name: "Nimble Ring of Magic",
     description: "A ring which seems to make its wearer more intelligent and nimble.",
     imageUrl: "/pictures/item100.png",
@@ -325,7 +338,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "asr",
+    id: "asr", // 841
     name: "Azure Signet Ring",
     description: "A Signet Ring from the Azure Royal Family.",
     imageUrl: "/pictures/item282.png",
@@ -340,7 +353,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "asmr",
+    id: "asmr", // 842
     name: "Azure Signet Magic Ring",
     description: "A Signet Ring from the Azure Royal Family.",
     imageUrl: "/pictures/item282.png",
@@ -354,7 +367,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "dhr",
+    id: "dhr", // 772
     name: "Dragon Heart Ring",
     description: "This ring is silent, but you feel an eerie echo of the final beat of a massive heart contained in a scaled chest.",
     imageUrl: "/pictures/item270.png",
@@ -369,7 +382,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "berserk",
+    id: "berserk", // 843
     name: "Berserker's Ring",
     description: "Forged by a legendary Berserker, this ring is said to increase the wearer's strength and speed.",
     imageUrl: "/pictures/item271.png",
@@ -383,7 +396,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "enhberserk",
+    id: "enhberserk", // 952
     name: "Enhanced Berserker's Ring",
     description: "This ring seems to be scarred to bits.  It's been through a lot, but it's still as strong as ever.",
     imageUrl: "/pictures/item271.png",
@@ -400,7 +413,7 @@ export const rings: SomRing[] = [
     id: "glacrov", // 1071
     name: "Glacier Ring of Virtue",
     description: "Forged from the iron taken from teh blood of Ezoria Tigers.",
-    imageUrl: "/pictures/item348.png",
+    imageUrl: "/pictures/item314.png",
     unique: true,
     benefitStats: {
       health: 30,
@@ -413,7 +426,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "obsidian",
+    id: "obsidian", // 825
     name: "Obsidian Ring",
     description: "Forged using the raw power of smoldered obsidian, this jewel radiates a strong life force.",
     imageUrl: "/pictures/item348.png",
@@ -478,7 +491,7 @@ export const rings: SomRing[] = [
     availableClasses: [SomClass.MAGE, SomClass.ANGEL],
   },
   {
-    id: "necro",
+    id: "necro", // 847
     name: "Necromancer's Ring",
     description: "Casts Oracle on enemies; found in the depths of an ancient Necromancer's Sanctum, this ring grants magical bonuses when worn.",
     imageUrl: "/pictures/item326.png",
@@ -491,6 +504,21 @@ export const rings: SomRing[] = [
     },
     requiredStats: {
       level: 250,
+    },
+  },
+  {
+    id: "necromagic", // 1087
+    name: "Necromancer's Magic Ring",
+    description: "Casts Oracle on enemies; found in the depths of an ancient Necromancer's Sanctum and reinforced with materials from the Nether Realm.  This ring grants magical bonuses when worn.",
+    imageUrl: "/pictures/item326.png",
+    unique: true,
+    benefitStats: {
+      mana: 400,
+      magic: 400,
+      speed: 50,
+    },
+    requiredStats: {
+      level: 500,
     },
   },
   {
@@ -510,7 +538,7 @@ export const rings: SomRing[] = [
     availableClasses: [SomClass.MAGE, SomClass.ANGEL],
   },
   {
-    id: "ult",
+    id: "ult", // 758
     name: "Ultimate Ring",
     description: "A ring which seems to make its wearer more intelligent and nimble.",
     imageUrl: "/pictures/item289.png",
@@ -528,7 +556,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "arom",
+    id: "arom", // 861
     name: "Accursed Ring of Magic",
     description: "A ring that increases the power of magic.",
     imageUrl: "/pictures/item118.png",
@@ -543,7 +571,7 @@ export const rings: SomRing[] = [
     }
   },
   {
-    id: "aros",
+    id: "aros", // 831
     name: "Accursed Ring of Strength",
     imageUrl: "/pictures/item103.png",
     unique: true,
@@ -572,7 +600,7 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "scorpreal",
+    id: "scorpreal", // 888
     name: "Scorpio's Real Ring",
     description: "Scorpio's REAL Ring!  This is extremely rare!",
     imageUrl: "/pictures/item307.png",
