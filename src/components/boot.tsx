@@ -23,8 +23,13 @@ const Boot: React.FC<{ boot: SomBoot }> = ({ boot }) => {
       </Link>
 
       <div className="flex flex-col px-2 gap-3">
+        {boot.availableClasses && (
+          <div className="flex flex-wrap gap-1 text-slate-500">
+            <p>Usable by</p>
+            {boot.availableClasses.map(ac => <p className="px-3 text-slate-300 bg-white/10 rounded-full">{ac}</p>)}
+          </div>
+        )}
         {boot.description && <p className="flex-wrap">{boot.description}</p>}
-        {boot.availableClasses && <p className="flex-wrap">{boot.availableClasses}</p>}
         {boot.benefitStats && <div className="flex flex-col px-2 gap-3 flex-wrap">
           <StatsBlock statBlock={boot.benefitStats} title="Bonuses / Penalties" showIcons />
         </div>}

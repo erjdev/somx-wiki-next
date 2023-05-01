@@ -1,6 +1,44 @@
+import { SomClass } from "./types/classes";
 import { SomRing } from "./types/item";
 
 export const rings: SomRing[] = [
+  {
+    id: "trinity",
+    name: "Trinity Ring",
+    description: "A ring forged from smelted minerals obtained from Tetra.  The ring has been enchanted to turn a player's sprite into a Trinity blade.  How firce is that?!  Yeah, not very fierce... but a floating sword!",
+    imageUrl: "/pictures/item294.png",
+    unique: true,
+    requiredStats: {
+      level: 1,
+    },
+  },
+  {
+    id: "robos", // 934
+    name: "Ring of Bos",
+    description: "A ring that raises your defense stat slightly and makes you feel like a cow.",
+    imageUrl: "/pictures/item269.png",
+    unique: true,
+    requiredStats: {
+      level: 1,
+    },
+    benefitStats: {
+      defense: 3,
+    },
+  },
+  {
+    id: "love", // 972
+    name: "Ring of Love",
+    description: "A beautiful ring crafted by a magical smith for those who wish to express their love.  This ring is magical and can expand to any size!",
+    imageUrl: "/pictures/item713.png",
+    requiredStats: {
+      level: 1,
+    },
+    benefitStats: {
+      mana: 25,
+      magic: 5,
+      speed: 10,
+    },
+  },
   {
     id: "broh",
     name: "Basic Ring of Health",
@@ -76,6 +114,50 @@ export const rings: SomRing[] = [
     },
   },
   {
+    id: "romight",
+    name: "Ring of Might",
+    description: "A ring possessing mystical defensive power.",
+    imageUrl: "/pictures/item279.png",
+    benefitStats: {
+      defense: 30,
+    },
+    requiredStats: {
+      level: 100,
+    },
+  },
+  {
+    id: "scorprepl",
+    name: "Scorpio's Ring Replica",
+    description: "You must be a wealthy player to have one of these.  A replica of the mythical Scorpio's Ring; while it does not act as a magical shield, it does raise all stats. Slightly.",
+    imageUrl: "/pictures/item222.png",
+    unique: true,
+    benefitStats: {
+      health: 30,
+      mana: 30,
+      strength: 12,
+      defense: 12,
+      magic: 12,
+      speed: 12,
+    },
+    requiredStats: {
+      level: 100,
+    },
+  },
+  {
+    id: "diamond",
+    name: "Diamond Ring",
+    description: "A ring with a beautiful diamond on it.  This ring symbolizes a promise of devotion and true love.",
+    imageUrl: "/pictures/item330.png",
+    unique: true,
+    benefitStats: {
+      health: 20,
+      strength: 5,
+    },
+    requiredStats: {
+      level: 10,
+    },
+  },
+  {
     id: "mros",
     name: "Minor Ring of Strength",
     description: "A ring that slightly increases the muscle mass of the wearer.",
@@ -122,6 +204,20 @@ export const rings: SomRing[] = [
     requiredStats: {
       level: 10,
     },
+  },
+  {
+    id: "mromana", // 1065
+    name: "Minor Ring of Mana",
+    description: "A ring that slightly increases the wearer's mana.",
+    imageUrl: "/pictures/item222.png",
+    unique: true,
+    benefitStats: {
+      mana: 50,
+    },
+    requiredStats: {
+      level: 10,
+    },
+    availableClasses: [SomClass.MAGE, SomClass.ANGEL],
   },
   {
     id: "modroh",
@@ -171,6 +267,20 @@ export const rings: SomRing[] = [
     requiredStats: {
       level: 25,
     },
+  },
+  {
+    id: "augromana", // 1066
+    name: "Augmented Ring of Mana",
+    description: "A ring which seems to give its wearer a moderate boost of mana.",
+    imageUrl: "/pictures/item98.png",
+    unique: true,
+    benefitStats: {
+      mana: 200,
+    },
+    requiredStats: {
+      level: 25,
+    },
+    availableClasses: [SomClass.MAGE, SomClass.ANGEL],
   },
   {
     id: "nimros",
@@ -273,21 +383,33 @@ export const rings: SomRing[] = [
     },
   },
   {
-    id: "ult",
-    name: "Ultimate Ring",
-    description: "A ring which seems to make its wearer more intelligent and nimble.",
-    imageUrl: "/pictures/item289.png",
+    id: "enhberserk",
+    name: "Enhanced Berserker's Ring",
+    description: "This ring seems to be scarred to bits.  It's been through a lot, but it's still as strong as ever.",
+    imageUrl: "/pictures/item271.png",
     unique: true,
     benefitStats: {
-      health: 100,
-      mana: 100,
-      strength: 100,
-      defense: 100,
-      magic: 100,
-      speed: 100,
+      health: 140,
+      speed: 140,
     },
     requiredStats: {
-      level: 400,
+      level: 100,
+    },
+  },
+  {
+    id: "glacrov", // 1071
+    name: "Glacier Ring of Virtue",
+    description: "Forged from the iron taken from teh blood of Ezoria Tigers.",
+    imageUrl: "/pictures/item348.png",
+    unique: true,
+    benefitStats: {
+      health: 30,
+      mana: 30,
+      strength: 60,
+      magic: 60,
+    },
+    requiredStats: {
+      level: 200,
     },
   },
   {
@@ -304,6 +426,105 @@ export const rings: SomRing[] = [
     },
     requiredStats: {
       level: 200,
+    },
+  },
+  {
+    id: "reinfobsidian", // 947
+    name: "Reinforced Obsidian Ring",
+    description: "Forged using the raw power of smoldered obsidian, then coated in the best minerals available.",
+    imageUrl: "/pictures/item297.png",
+    unique: true,
+    benefitStats: {
+      health: 500,
+      strength: 75,
+      defense: 75,
+      speed: 50,
+    },
+    requiredStats: {
+      level: 300,
+    },
+  },
+  {
+    id: "infobsidian", // 948
+    name: "Infused Obsidian Ring",
+    description: "Forged using the raw power of smoldered obsidian, then coated in the best minerals available.",
+    imageUrl: "/pictures/item297.png",
+    unique: true,
+    benefitStats: {
+      mana: 500,
+      magic: 200,
+      speed: 50,
+    },
+    requiredStats: {
+      level: 300,
+    },
+  },
+  {
+    id: "holyobsidian", // 950
+    name: "Holy Obsidian Ring",
+    description: "Forged using the raw power of smoldered obsidian, then coated in the best minerals available.",
+    imageUrl: "/pictures/item297.png",
+    unique: true,
+    benefitStats: {
+      health: 250,
+      mana: 250,
+      defense: 75,
+      magic: 75,
+      speed: 50,
+    },
+    requiredStats: {
+      level: 300,
+    },
+    availableClasses: [SomClass.MAGE, SomClass.ANGEL],
+  },
+  {
+    id: "necro",
+    name: "Necromancer's Ring",
+    description: "Casts Oracle on enemies; found in the depths of an ancient Necromancer's Sanctum, this ring grants magical bonuses when worn.",
+    imageUrl: "/pictures/item326.png",
+    unique: true,
+    benefitStats: {
+      health: 100,
+      mana: 200,
+      strength: 100,
+      magic: 200,
+    },
+    requiredStats: {
+      level: 250,
+    },
+  },
+  {
+    id: "glata", // 1055
+    name: "Glata Mage Espionage Ring",
+    description: "A special ring crafted by the Undead Glata Mages; used to disguise mages as Glata members to sneak past certain enemies in Belthazar.",
+    imageUrl: "/pictures/item302.png",
+    unique: true,
+    benefitStats: {
+      mana: 1500,
+      magic: 100,
+      speed: 50,
+    },
+    requiredStats: {
+      level: 300,
+    },
+    availableClasses: [SomClass.MAGE, SomClass.ANGEL],
+  },
+  {
+    id: "ult",
+    name: "Ultimate Ring",
+    description: "A ring which seems to make its wearer more intelligent and nimble.",
+    imageUrl: "/pictures/item289.png",
+    unique: true,
+    benefitStats: {
+      health: 100,
+      mana: 100,
+      strength: 100,
+      defense: 100,
+      magic: 100,
+      speed: 100,
+    },
+    requiredStats: {
+      level: 400,
     },
   },
   {
@@ -348,6 +569,24 @@ export const rings: SomRing[] = [
     benefitStats: {
       strength: 300,
       health: 500,
+    },
+  },
+  {
+    id: "scorpreal",
+    name: "Scorpio's Real Ring",
+    description: "Scorpio's REAL Ring!  This is extremely rare!",
+    imageUrl: "/pictures/item307.png",
+    unique: true,
+    benefitStats: {
+      health: 500,
+      mana: 1000,
+      strength: 250,
+      defense: 250,
+      magic: 1000,
+      speed: 50,
+    },
+    requiredStats: {
+      level: 300,
     },
   },
 ];

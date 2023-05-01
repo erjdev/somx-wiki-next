@@ -21,8 +21,13 @@ const Ring: React.FC<{ ring: SomRing }> = ({ ring }) => {
       </Link>
 
       <div className="flex flex-col px-2 gap-3">
+        {ring.availableClasses && (
+          <div className="flex flex-wrap gap-1 text-slate-500 italic">
+            <p>Usable by</p>
+            {ring.availableClasses.map(ac => <p className="px-3 text-slate-300 bg-blue-500/20 rounded-full">{ac}</p>)}
+          </div>
+        )}
         {ring.description && <p className="flex-wrap">{ring.description}</p>}
-        {ring.availableClasses && <p className="flex-wrap">{ring.availableClasses}</p>}
         {ring.benefitStats && <div className="flex flex-col px-2 gap-3 flex-wrap">
           <StatsBlock statBlock={ring.benefitStats} title="Bonuses / Penalties" showIcons />
         </div>}

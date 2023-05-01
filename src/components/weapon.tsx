@@ -31,8 +31,13 @@ const Weapon: React.FC<{ weapon: SomWeapon }> = ({ weapon }) => {
       </Link>
 
       <div className="flex flex-col px-2 gap-3">
+        {weapon.availableClasses && (
+          <div className="flex flex-wrap gap-1 text-slate-500">
+            <p>Usable by</p>
+            {weapon.availableClasses.map(ac => <p className="px-3 text-slate-300 bg-white/10 rounded-full">{ac}</p>)}
+          </div>
+        )}
         {weapon.description && <p className="flex-wrap">{weapon.description}</p>}
-        {weapon.availableClasses && <p className="flex-wrap">{weapon.availableClasses}</p>}
         {weapon.benefitStats && <div className="flex flex-col px-2 gap-3 flex-wrap">
           <StatsBlock statBlock={weapon.benefitStats} title="Bonuses / Penalties" showIcons />
         </div>}

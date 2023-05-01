@@ -24,8 +24,13 @@ const Helmet: React.FC<{ helmet: SomHelmet }> = ({ helmet }) => {
       </Link>
 
       <div className="flex flex-col px-2 gap-3">
+        {helmet.availableClasses && (
+          <div className="flex flex-wrap gap-1 text-slate-500">
+            <p>Usable by</p>
+            {helmet.availableClasses.map(ac => <p className="px-3 text-slate-300 bg-white/10 rounded-full">{ac}</p>)}
+          </div>
+        )}
         {helmet.description && <p className="flex-wrap">{helmet.description}</p>}
-        {helmet.availableClasses && <p className="flex-wrap">{helmet.availableClasses}</p>}
         {helmet.benefitStats && <div className="flex flex-col px-2 gap-3 flex-wrap">
           <StatsBlock statBlock={helmet.benefitStats} title="Bonuses / Penalties" showIcons />
         </div>}

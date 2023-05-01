@@ -31,8 +31,13 @@ const Armor: React.FC<{ armor: SomArmor }> = ({ armor }) => {
       </Link>
 
       <div className="flex flex-col px-2 gap-3">
+        {armor.availableClasses && (
+          <div className="flex flex-wrap gap-1 text-slate-500">
+            <p>Usable by</p>
+            {armor.availableClasses.map(ac => <p className="px-3 text-slate-300 bg-white/10 rounded-full">{ac}</p>)}
+          </div>
+        )}
         {armor.description && <p className="flex-wrap">{armor.description}</p>}
-        {armor.availableClasses && <p className="flex-wrap">{armor.availableClasses}</p>}
         {armor.benefitStats && <div className="flex flex-col px-2 gap-3 flex-wrap">
           <StatsBlock statBlock={armor.benefitStats} title="Bonuses / Penalties" showIcons />
         </div>}

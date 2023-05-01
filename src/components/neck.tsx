@@ -21,8 +21,13 @@ const Neck: React.FC<{ neck: SomWeapon }> = ({ neck }) => {
       </Link>
 
       <div className="flex flex-col px-2 gap-3">
+        {neck.availableClasses && (
+          <div className="flex flex-wrap gap-1 text-slate-500">
+            <p>Usable by</p>
+            {neck.availableClasses.map(ac => <p className="px-3 text-slate-300 bg-white/10 rounded-full">{ac}</p>)}
+          </div>
+        )}
         {neck.description && <p className="flex-wrap">{neck.description}</p>}
-        {neck.availableClasses && <p className="flex-wrap">{neck.availableClasses}</p>}
         {neck.benefitStats && <div className="flex flex-col px-2 gap-3 flex-wrap">
           <StatsBlock statBlock={neck.benefitStats} title="Bonuses / Penalties" showIcons />
         </div>}
