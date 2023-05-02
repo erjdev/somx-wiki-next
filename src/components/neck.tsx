@@ -14,9 +14,9 @@ const Neck: React.FC<{ neck: SomNeck }> = ({ neck }) => {
         <img className="w-12 h-12" src={neck.imageUrl} alt={neck.name} />
         <div className="flex-grow flex flex-col gap-1">
           <p className="text-xl underline underline-offset-4 decoration-blue-700">{neck.name}</p>
-          <div className="flex flex-col sm:flex-row justify-between italic font-light gap-1 md:gap-2 items-start sm:items-center text-sm">
+          <div className="flex flex-wrap justify-between italic font-light gap-x-2 gap-y-1 items-center text-sm">
             {neck.requiredStats?.level && <p className="opacity-80 p-1 pl-0">Level {neck.requiredStats?.level}</p>}
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               {neck.unique && <p className="rounded-full bg-slate-800 px-3 tracking-wider text-sm opacity-80">Unique</p>}
               {neck.bindOnEquip && <p className="rounded-full bg-red-800 px-3 tracking-wider text-sm opacity-80">BoE</p>}
               {neck.bindOnPickup && <p className="rounded-full bg-red-800 px-3 tracking-wider text-sm opacity-80">BoP</p>}

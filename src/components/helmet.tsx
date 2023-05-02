@@ -15,9 +15,9 @@ const Helmet: React.FC<{ helmet: SomHelmet }> = ({ helmet }) => {
         <img className="w-12 h-12" src={helmet.imageUrl} alt={helmet.name} />
         <div className="flex-grow flex flex-col gap-1">
           <p className="text-xl underline underline-offset-4 decoration-amber-500 group-hover:decoration-blue-400">{helmet.name}</p>
-          <div className="flex flex-col sm:flex-row justify-between italic font-light gap-1 md:gap-2 items-start sm:items-center text-sm">
+          <div className="flex flex-wrap justify-between italic font-light gap-x-2 gap-y-1 items-center text-sm">
             {helmet.requiredStats?.level && <p className="p-1 pl-0">Level {helmet.requiredStats?.level}</p>}
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               {helmet.requiredStats?.speed && <p className="p-1 pl-0 text-amber-500">{helmet.requiredStats?.speed} Speed</p>}
               {helmet.durability && helmet.durability > 0 && <p className="p-1 pl-0 text-gray-300">{helmet.durability} Durability</p>}
             </div>
