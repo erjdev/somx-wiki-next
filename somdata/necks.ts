@@ -15,6 +15,20 @@ const unsortedNecks: SomNeck[] = [
     },
   },
   {
+    id: "crimson-trinity", // ??? - Not sure what ID this is
+    name: "Crimson Trinity Pendant",
+    description: "", // todo - add description
+    imageUrl: "/pictures/item143.png", // todo - fix icon
+    showsHealth: true,
+    requiredStats: { level: 425 },
+    benefitStats: {
+      strength: 200,
+      defense: 200,
+      speed: 200,
+      health: 100,
+    },
+  },
+  {
     id: "hellforged-trinity", // 871
     name: "Hellforged Trinity Amulet",
     description: "A reforged version of the Crimson Trinity Pendant that has been molten down with a Trinity Source by the Flame of Prometheus.",
@@ -198,6 +212,34 @@ const unsortedNecks: SomNeck[] = [
       strength: 275,
       defense: 100,
       speed: 30,
+    },
+  },
+  {
+    id: "glacier-charm", // ??? - Not sure what ID this is
+    name: "Glacier Charm",
+    description: "", // todo - add description
+    showsHealth: true,
+    unique: true,
+    imageUrl: "/pictures/item164.png", // todo - fix icon
+    requiredStats: { level: 200 },
+    benefitStats: {
+      health: 50,
+      mana: 500,
+      magic: 165,
+      speed: 75,
+    },
+    availableClasses: [SomClass.MAGE],
+  },
+  {
+    id: "golden-finality", // ??? - Not sure what ID this is
+    name: "Golden Finality Chain",
+    description: "", // todo - add description
+    showsHealth: true,
+    unique: true,
+    imageUrl: "/pictures/item164.png", // todo - fix icon
+    requiredStats: { level: 275 },
+    benefitStats: {
+      strength: 300,
     },
   },
 ];
