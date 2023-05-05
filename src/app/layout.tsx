@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-slate-950 text-slate-50`}>
         <div className="min-h-screen flex flex-col max-w-7xl mx-auto">
           <Navbar />
-          <main className="flex-grow flex flex-col items-center justify-between p-8">
+          <main className="flex-grow flex flex-col items-center justify-between px-8 pb-8">
             {children}
           </main>
           <footer className="mx-auto flex flex-col items-center font-extralight text-xs tracking-wider text-slate-400 gap-1 pb-2">
