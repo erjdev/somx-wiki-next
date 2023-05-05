@@ -22,6 +22,10 @@ export default function RootLayout({
           <main className="flex-grow flex flex-col items-center justify-between p-8">
             {children}
           </main>
+          <footer className="mx-auto flex flex-col items-center font-extralight text-xs tracking-wider text-slate-400 gap-1 pb-2">
+            <div>Made with ❤️ by <a href="https://erj.dev/" target="_blank" rel="noreferrer noopener">Slate</a></div>
+            <div>Images and items from <a className="text-blue-400" href="https://www.secretsofmirage.com/" target="_blank" rel="noreferrer noopener">Secrets of Mirage (SoMX)</a></div>
+          </footer>
         </div>
       </body>
     </html>
