@@ -3,12 +3,13 @@ import { SomRing } from '../../somdata/types/item';
 import { notFound } from 'next/navigation';
 import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
+import ItemContainer from './item-container';
 
 const Ring: React.FC<{ ring: SomRing }> = ({ ring }) => {
   if (!ring) notFound();
 
   return (
-    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg drop-shadow-lg border-2 border-blue-900">
+    <ItemContainer className="border-blue-900">
       <EquippableItemLink href={`/rings/${ring.id}`}>
         <img className="w-12 h-12" src={ring.imageUrl} alt={ring.name} />
         <div className="flex-grow flex flex-col gap-1">
@@ -26,7 +27,7 @@ const Ring: React.FC<{ ring: SomRing }> = ({ ring }) => {
       </EquippableItemLink>
 
       <EquippableItemDetails {...ring} />
-    </div>
+    </ItemContainer>
   );
 }
 

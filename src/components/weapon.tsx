@@ -3,6 +3,7 @@ import { SomWeapon } from '../../somdata/types/item';
 import { notFound } from 'next/navigation';
 import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
+import ItemContainer from './item-container';
 
 const Weapon: React.FC<{ weapon: SomWeapon }> = ({ weapon }) => {
   if (!weapon) {
@@ -10,7 +11,7 @@ const Weapon: React.FC<{ weapon: SomWeapon }> = ({ weapon }) => {
   }
 
   return (
-    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg drop-shadow-lg border-2 border-red-900">
+    <ItemContainer className="border-red-900">
       <EquippableItemLink href={`/weapons/${weapon.id}`}>
         <img className="w-12 h-12" src={weapon.imageUrl} alt={weapon.name} />
         <div className="flex-grow flex flex-col gap-1">
@@ -24,7 +25,7 @@ const Weapon: React.FC<{ weapon: SomWeapon }> = ({ weapon }) => {
       </EquippableItemLink>
 
       <EquippableItemDetails {...weapon} />
-    </div>
+    </ItemContainer>
   )
 }
 

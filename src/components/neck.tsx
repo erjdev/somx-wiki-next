@@ -4,12 +4,13 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
+import ItemContainer from './item-container';
 
 const Neck: React.FC<{ neck: SomNeck }> = ({ neck }) => {
   if (!neck) notFound();
 
   return (
-    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg drop-shadow-lg border-2 border-blue-900">
+    <ItemContainer className="border-blue-900">
       <EquippableItemLink href={`/necks/${neck.id}`}>
         <img className="w-12 h-12" src={neck.imageUrl} alt={neck.name} />
         <div className="flex-grow flex flex-col gap-1">
@@ -27,7 +28,7 @@ const Neck: React.FC<{ neck: SomNeck }> = ({ neck }) => {
       </EquippableItemLink>
 
       <EquippableItemDetails {...neck} />
-    </div>
+    </ItemContainer>
   );
 }
 

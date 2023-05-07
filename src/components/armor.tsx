@@ -3,6 +3,7 @@ import { SomArmor } from '../../somdata/types/item';
 import { notFound } from 'next/navigation';
 import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
+import ItemContainer from './item-container';
 
 const Armor: React.FC<{ armor: SomArmor }> = ({ armor }) => {
   if (!armor) {
@@ -10,7 +11,7 @@ const Armor: React.FC<{ armor: SomArmor }> = ({ armor }) => {
   }
 
   return (
-    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg border-2 border-slate-800">
+    <ItemContainer className="border-slate-800">
       <EquippableItemLink href={`/armor/${armor.id}`}>
         <img className="w-12 h-12" src={armor.imageUrl} alt={armor.name} />
         <div className="flex-grow flex flex-col gap-1">
@@ -25,7 +26,7 @@ const Armor: React.FC<{ armor: SomArmor }> = ({ armor }) => {
       </EquippableItemLink>
 
       <EquippableItemDetails {...armor} />
-    </div>
+    </ItemContainer>
   )
 }
 

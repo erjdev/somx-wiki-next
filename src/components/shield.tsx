@@ -3,6 +3,7 @@ import { SomShield } from '../../somdata/types/item'
 import { notFound } from 'next/navigation';
 import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
+import ItemContainer from './item-container';
 
 const Shield: React.FC<{ shield: SomShield }> = ({ shield }) => {
   if (!shield) {
@@ -10,7 +11,7 @@ const Shield: React.FC<{ shield: SomShield }> = ({ shield }) => {
   }
 
   return (
-    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg border-2 border-gray-900">
+    <ItemContainer className="border-gray-900">
       <EquippableItemLink href={`/shields/${shield.id}`}>
         <img className="w-12 h-12" src={shield.imageUrl} alt={shield.name} />
         <div className="flex-grow flex flex-col gap-1">
@@ -25,7 +26,7 @@ const Shield: React.FC<{ shield: SomShield }> = ({ shield }) => {
       </EquippableItemLink>
 
       <EquippableItemDetails {...shield} />
-    </div>
+    </ItemContainer>
   )
 }
 

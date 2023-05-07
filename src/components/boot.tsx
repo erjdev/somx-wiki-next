@@ -3,6 +3,7 @@ import { SomBoot } from '../../somdata/types/item';
 import { notFound } from 'next/navigation';
 import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
+import ItemContainer from './item-container';
 
 const Boot: React.FC<{ boot: SomBoot }> = ({ boot }) => {
   if (!boot) {
@@ -10,7 +11,7 @@ const Boot: React.FC<{ boot: SomBoot }> = ({ boot }) => {
   }
 
   return (
-    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg border-2 border-blue-900">
+    <ItemContainer className="border-blue-900">
       <EquippableItemLink href={`/boots/${boot.id}`}>
         <img className="w-12 h-12" src={boot.imageUrl} alt={boot.name} />
         <div className="flex-grow flex flex-col gap-1">
@@ -23,7 +24,7 @@ const Boot: React.FC<{ boot: SomBoot }> = ({ boot }) => {
       </EquippableItemLink>
 
       <EquippableItemDetails {...boot} />
-    </div>
+    </ItemContainer>
   )
 }
 

@@ -3,6 +3,7 @@ import { SomHelmet } from '../../somdata/types/item'
 import { notFound } from 'next/navigation';
 import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
+import ItemContainer from './item-container';
 
 const Helmet: React.FC<{ helmet: SomHelmet }> = ({ helmet }) => {
   if (!helmet) {
@@ -10,7 +11,7 @@ const Helmet: React.FC<{ helmet: SomHelmet }> = ({ helmet }) => {
   }
 
   return (
-    <div className="flex flex-col p-4 gap-3 max-w-xl rounded-lg border-2 border-amber-900">
+    <ItemContainer className="border-amber-900">
       <EquippableItemLink href={`/helmets/${helmet.id}`}>
         <img className="w-12 h-12" src={helmet.imageUrl} alt={helmet.name} />
         <div className="flex-grow flex flex-col gap-1">
@@ -26,7 +27,7 @@ const Helmet: React.FC<{ helmet: SomHelmet }> = ({ helmet }) => {
       </EquippableItemLink>
 
       <EquippableItemDetails {...helmet} />
-    </div>
+    </ItemContainer>
   )
 }
 
