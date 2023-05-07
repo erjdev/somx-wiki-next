@@ -1,6 +1,6 @@
 import { SomWeapon } from "./types/item";
 
-export const weapons: SomWeapon[] = [
+const unsortedWeapons: SomWeapon[] = [
   {
     id: "iron-sabre",
     name: "Iron Sabre",
@@ -39,3 +39,15 @@ export const weapons: SomWeapon[] = [
     durability: 960,
   },
 ];
+
+// Sorted by strength, then durability, then name
+export const weapons = unsortedWeapons.sort((a, b) => {
+  let ret = (a.requiredStats?.strength ?? 0) - (b.requiredStats?.strength ?? 0);
+  if (ret === 0) {
+    ret = (a.durability ?? 0) - (b.durability ?? 0);
+  }
+  if (ret === 0) {
+    ret = a.name.localeCompare(b.name);
+  }
+  return ret;
+});

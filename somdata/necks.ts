@@ -244,6 +244,7 @@ const unsortedNecks: SomNeck[] = [
   },
 ];
 
+// Sorted by level, then alphabetically
 export const necks = unsortedNecks.sort((a, b) => {
   let ret = (a.requiredStats?.level ?? 0) - (b.requiredStats?.level ?? 0);
   if (ret === 0) {

@@ -686,8 +686,8 @@ const unsortedRings: SomRing[] = [
   },
 ];
 
+// Sorted by level then name
 export const rings = unsortedRings.sort((a, b) => {
-  // Sort by level then name
   let ret = (a.requiredStats?.level ?? 0) - (b.requiredStats?.level ?? 0);
   if (ret === 0) {
     ret = a.name.localeCompare(b.name);

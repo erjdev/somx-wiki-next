@@ -1,4 +1,4 @@
-import { armors } from "./armors";
+import { armor } from "./armor";
 import { boots } from "./boots";
 import { helmets } from "./helmets";
 import { necks } from "./necks";
@@ -13,7 +13,7 @@ import { ranks } from "./ranks";
 import { SomDatabase } from "./types/base-data";
 
 export const SomData: SomDatabase = {
-  armor: armors,
+  armor,
   boots,
   helmets,
   necks,

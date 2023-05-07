@@ -192,6 +192,7 @@ const unsortedShields: SomShield[] = [
   },
 ];
 
+// Sorted by block percent, then name
 export const shields = unsortedShields.sort((a, b) => {
   let ret = a.blockPercent - b.blockPercent;
   if (ret === 0) {

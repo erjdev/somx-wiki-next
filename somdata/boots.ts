@@ -25,6 +25,7 @@ const unsortedBoots: SomBoot[] = [
   },
 ]
 
+// Sorted by durability, then name
 export const boots = unsortedBoots.sort((a, b) => {
   let ret = (a.durability ?? 0) - (b.durability ?? 0);
   if (ret === 0) {
