@@ -37,7 +37,7 @@ export default async function NeckPage({ params }: { params: { id: string } }) {
       </p>
       <div className="flex flex-col md:flex-row gap-2">
         <Neck neck={neck} />
-        <div className="">
+        <div className="basis-full">
           More details...
         </div>
       </div>

@@ -25,7 +25,7 @@ export const StatBonuses = ({ statBlock }: { statBlock: SomStats }) => {
   const negativeColorClass = "text-red-300";
 
   return (
-    <div className="flex flex-col px-2 gap-2 max-w-xs">
+    <div className="flex flex-col px-2 gap-2 max-w-xs mx-auto">
       <div className="flex items-center gap-2">
         <p className="text-md tracking-wide opacity-80">Bonuses / Penalties</p>
       </div>

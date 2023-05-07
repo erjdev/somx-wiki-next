@@ -33,7 +33,7 @@ export default async function RingPage({ params }: { params: { id: string } }) {
       </p>
       <div className="flex flex-col md:flex-row gap-4">
         <Ring ring={ring} />
-        <div className="">
+        <div className="basis-full">
           More details...
         </div>
       </div>

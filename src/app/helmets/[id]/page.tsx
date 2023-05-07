@@ -33,7 +33,7 @@ export default async function HelmetPage({ params }: { params: { id: string } })
       </p>
       <div className="flex flex-col md:flex-row gap-4">
         <Helmet helmet={helmet} />
-        <div className="">
+        <div className="basis-full">
           More details...
         </div>
       </div>
