@@ -2,14 +2,15 @@ import { notFound } from "next/navigation";
 import { SomWeapon } from "../../../somdata/types/item";
 import Weapon from "@/components/weapon";
 import Link from "next/link";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: `SoMX Wiki - Weapons`,
   description: "Weapons on SoMX Wiki",
 }
 
 async function getWeaponsAsync(): Promise<SomWeapon[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/weapons`, { next: { revalidate: 60 }});
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/weapons` /* ,{ next: { revalidate: 60 }} */);
   return (await res.json()) as unknown as SomWeapon[];
 }
 

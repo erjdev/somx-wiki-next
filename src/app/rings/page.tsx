@@ -1,14 +1,15 @@
 import Ring from "@/components/ring";
 import { SomRing } from "../../../somdata/types/item";
 import Link from "next/link";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: `SoMX Wiki - Rings`,
   description: "Rings on SoMX Wiki",
 }
 
 async function getRingsAsync(): Promise<SomRing[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/rings`, { next: { revalidate: 60 }});
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/rings` /* ,{ next: { revalidate: 60 }} */);
   return (await res.json()) as unknown as SomRing[];
 }
 

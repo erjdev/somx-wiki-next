@@ -39,6 +39,10 @@ const NavLinkListItem: React.FC<React.PropsWithChildren<{href: string}>> = ({ hr
   </li>;
 
 const NavLinkLogo: React.FC = () =>
-  <Link href="/" className="text-2xl font-bold tracking-widest mx-4 flex-shrink-0 border-b-4 border-blue-700">SoMX Wiki</Link>;
+  <Link href="/" className="pt-2 relative text-2xl font-bold tracking-widest mx-4 flex-shrink-0 flex items-center gap-2 text-purple-100">
+    <img className="absolute -bottom-2 -right-4 w-8 h-8" src="/pictures/bandana-transparent.png" alt="bandana" />
+    <img className="absolute -bottom-3 -left-4 w-8 h-8" src="/pictures/shortsword-transparent.png" alt="bandana" />
+    <span className="border-b-4 border-[rgb(42,5,86)]">SoMX Wiki</span>
+  </Link>;
 
 export default Navbar;

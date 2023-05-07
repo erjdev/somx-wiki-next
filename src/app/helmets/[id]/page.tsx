@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 }
 
 async function getHelmetAsync(id: string): Promise<SomHelmet> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/helmets/${id}`, { next: { revalidate: 60 }});
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/helmets/${id}` /* ,{ next: { revalidate: 60 }} */);
   const resSomHelmet = (await res.json()) as unknown as SomHelmet;
   if (!resSomHelmet?.name) notFound();
   return resSomHelmet;

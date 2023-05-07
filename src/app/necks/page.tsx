@@ -1,14 +1,15 @@
 import Neck from "@/components/neck";
 import { SomNeck } from "../../../somdata/types/item";
 import Link from "next/link";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: `SoMX Wiki - Necks`,
   description: "Necks on SoMX Wiki",
 }
 
 async function getNecksAsync(): Promise<SomNeck[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/necks`, { next: { revalidate: 60 }});
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/necks` /* ,{ next: { revalidate: 60 }} */);
   return (await res.json()) as unknown as SomNeck[];
 }
 

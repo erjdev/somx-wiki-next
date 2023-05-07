@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 }
 
 async function getArmorAsync(id: string): Promise<SomArmor> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/armor/${id}`, { next: { revalidate: 60 }});
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/armor/${id}` /* ,{ next: { revalidate: 60 }} */);
   const resSomArmor = (await res.json()) as unknown as SomArmor;
   if (!resSomArmor?.name) notFound();
   return resSomArmor;

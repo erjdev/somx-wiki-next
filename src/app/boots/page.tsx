@@ -1,14 +1,15 @@
 import Link from "next/link";
 import { SomBoot } from "../../../somdata/types/item";
 import Boot from "@/components/boot";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: `SoMX Wiki - Boots`,
   description: "Boots on SoMX Wiki",
 }
 
 async function getBootsAsync(): Promise<SomBoot[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/boots`, { next: { revalidate: 60 }});
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/boots` /* ,{ next: { revalidate: 60 }} */);
   return (await res.json()) as unknown as SomBoot[];
 }
 

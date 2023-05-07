@@ -2,21 +2,25 @@ import { notFound } from "next/navigation";
 import { SomNeck } from "../../../../somdata/types/item";
 import Neck from "@/components/neck";
 import Link from "next/link";
+import { OpenGraph } from "next/dist/lib/metadata/types/opengraph-types";
+import { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const neck = await getNeckAsync(params.id);
 
-  return {
+  const meta: Metadata = {
     title: `SoMX Wiki - Necks - ${neck.name}`,
-    description: neck.description,
+    description: neck.description || "No description found",
     openGraph: {
       images: [neck.imageUrl],
-    }
-  }
+    },
+  };
+
+  return meta;
 }
 
 async function getNeckAsync(id: string): Promise<SomNeck> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/necks/${id}`, { next: { revalidate: 60 }});
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/necks/${id}` /* ,{ next: { revalidate: 60 }} */);
   const resSomNeck = (await res.json()) as unknown as SomNeck;
   if (!resSomNeck?.name) notFound();
   return resSomNeck;
