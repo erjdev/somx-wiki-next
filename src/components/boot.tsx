@@ -5,7 +5,7 @@ import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
 import ItemContainer from './item-container';
 
-const Boot: React.FC<{ boot: SomBoot }> = ({ boot }) => {
+const Boot: React.FC<{ boot: SomBoot, showBenefits?: boolean }> = ({ boot, showBenefits = true }) => {
   if (!boot) {
     notFound();
   }
@@ -23,7 +23,7 @@ const Boot: React.FC<{ boot: SomBoot }> = ({ boot }) => {
         </div>
       </EquippableItemLink>
 
-      <EquippableItemDetails {...boot} />
+      <EquippableItemDetails {...boot} showBenefits={showBenefits} />
     </ItemContainer>
   )
 }

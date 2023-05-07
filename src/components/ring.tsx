@@ -5,7 +5,7 @@ import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
 import ItemContainer from './item-container';
 
-const Ring: React.FC<{ ring: SomRing }> = ({ ring }) => {
+const Ring: React.FC<{ ring: SomRing, showBenefits?: boolean }> = ({ ring, showBenefits = true }) => {
   if (!ring) notFound();
 
   return (
@@ -26,7 +26,7 @@ const Ring: React.FC<{ ring: SomRing }> = ({ ring }) => {
         </div>
       </EquippableItemLink>
 
-      <EquippableItemDetails {...ring} />
+      <EquippableItemDetails {...ring} showBenefits={showBenefits} />
     </ItemContainer>
   );
 }

@@ -21,7 +21,7 @@ export default async function ShieldsPage() {
         <Link href="/shields" className="underline-offset-2 decoration-blue-700 hover:underline">Shields</Link>
       </p>
       <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        {shields.map((shield) => <Shield shield={shield} key={shield.name} />)}
+        {shields.map((shield) => <Shield shield={shield} key={shield.name} showBenefits={false} />)}
       </div>
     </div>
   );

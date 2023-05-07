@@ -21,7 +21,7 @@ export default async function ArmorsPage() {
         <Link href="/armor" className="underline-offset-2 decoration-blue-700 hover:underline">Armor</Link>
       </p>
       <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        {armor.map((a) => <Armor armor={a} key={a.name} />)}
+        {armor.map((a) => <Armor armor={a} key={a.name} showBenefits={false} />)}
       </div>
     </div>
   );

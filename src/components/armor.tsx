@@ -5,7 +5,7 @@ import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
 import ItemContainer from './item-container';
 
-const Armor: React.FC<{ armor: SomArmor }> = ({ armor }) => {
+const Armor: React.FC<{ armor: SomArmor, showBenefits?: boolean }> = ({ armor, showBenefits = true }) => {
   if (!armor) {
     notFound();
   }
@@ -25,7 +25,7 @@ const Armor: React.FC<{ armor: SomArmor }> = ({ armor }) => {
         </div>
       </EquippableItemLink>
 
-      <EquippableItemDetails {...armor} />
+      <EquippableItemDetails {...armor} showBenefits={showBenefits} />
     </ItemContainer>
   )
 }

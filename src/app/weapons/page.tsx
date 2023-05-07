@@ -22,7 +22,7 @@ export default async function WeaponsPage() {
         <Link href="/weapons" className="underline-offset-2 decoration-blue-700 hover:underline">Weapons</Link>
       </p>
       <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        {weapons.map((w) => <Weapon weapon={w} key={w.name} />)}
+        {weapons.map((w) => <Weapon weapon={w} key={w.name} showBenefits={false} />)}
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ export default async function RingsPage() {
         <Link href="/rings" className="underline-offset-2 decoration-blue-700 hover:underline">Rings</Link>
       </p>
       <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        {rings.map((ring) => <Ring ring={ring} key={ring.name} />)}
+        {rings.map((ring) => <Ring ring={ring} key={ring.name} showBenefits={false} />)}
       </div>
     </div>
   );

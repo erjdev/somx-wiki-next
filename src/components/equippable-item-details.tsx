@@ -2,10 +2,13 @@ import React from 'react';
 import { SomEquippableItemBase } from '../../somdata/types/item';
 import { StatBonuses } from './stat-bonuses';
 
-const EquippableItemDetails: React.FC<SomEquippableItemBase> = ({
+const EquippableItemDetails: React.FC<SomEquippableItemBase & {
+  showBenefits?: boolean,
+}> = ({
   availableClasses,
   description,
   benefitStats,
+  showBenefits = true,
 }) => {
   return (
     <div className="flex flex-col px-2 gap-3">
@@ -16,7 +19,7 @@ const EquippableItemDetails: React.FC<SomEquippableItemBase> = ({
         </div>
       )}
       {description && <p className="flex-wrap">{description}</p>}
-      {benefitStats && <div className="px-2"><StatBonuses statBlock={benefitStats} /></div>}
+      {showBenefits && benefitStats && <div className="px-2"><StatBonuses statBlock={benefitStats} /></div>}
     </div>
   )
 }

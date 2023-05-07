@@ -5,7 +5,7 @@ import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
 import ItemContainer from './item-container';
 
-const Shield: React.FC<{ shield: SomShield }> = ({ shield }) => {
+const Shield: React.FC<{ shield: SomShield, showBenefits?: boolean }> = ({ shield, showBenefits = true }) => {
   if (!shield) {
     notFound();
   }
@@ -25,7 +25,7 @@ const Shield: React.FC<{ shield: SomShield }> = ({ shield }) => {
         </div>
       </EquippableItemLink>
 
-      <EquippableItemDetails {...shield} />
+      <EquippableItemDetails {...shield} showBenefits={showBenefits} />
     </ItemContainer>
   )
 }

@@ -21,7 +21,7 @@ export default async function NecksPage() {
         <Link href="/necks" className="underline-offset-2 decoration-blue-700 hover:underline">Necks</Link>
       </p>
       <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        {necks.map((neck) => <Neck neck={neck} key={neck.name} />)}
+        {necks.map((neck) => <Neck neck={neck} key={neck.name} showBenefits={false} />)}
       </div>
     </div>
   );

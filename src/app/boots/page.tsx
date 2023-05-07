@@ -21,7 +21,7 @@ export default async function RingsPage() {
         <Link href="/boots" className="underline-offset-2 decoration-blue-700 hover:underline">Boots</Link>
       </p>
       <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        {boots.map((boot) => <Boot boot={boot} key={boot.name} />)}
+        {boots.map((boot) => <Boot boot={boot} key={boot.name} showBenefits={false} />)}
       </div>
     </div>
   );

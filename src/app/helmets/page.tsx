@@ -21,7 +21,7 @@ export default async function HelmetsPage() {
         <Link href="/helmets" className="underline-offset-2 decoration-blue-700 hover:underline">Helmets</Link>
       </p>
       <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        {helmets.map((helmet) => <Helmet helmet={helmet} key={helmet.name} />)}
+        {helmets.map((helmet) => <Helmet helmet={helmet} key={helmet.name} showBenefits={false} />)}
       </div>
     </div>
   );

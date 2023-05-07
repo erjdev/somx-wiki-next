@@ -6,7 +6,7 @@ import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
 import ItemContainer from './item-container';
 
-const Neck: React.FC<{ neck: SomNeck }> = ({ neck }) => {
+const Neck: React.FC<{ neck: SomNeck, showBenefits?: boolean }> = ({ neck, showBenefits = true }) => {
   if (!neck) notFound();
 
   return (
@@ -27,7 +27,7 @@ const Neck: React.FC<{ neck: SomNeck }> = ({ neck }) => {
         </div>
       </EquippableItemLink>
 
-      <EquippableItemDetails {...neck} />
+      <EquippableItemDetails {...neck} showBenefits={showBenefits} />
     </ItemContainer>
   );
 }
