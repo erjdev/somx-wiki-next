@@ -3,7 +3,7 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-col sm:flex-row items-center gap-4 justify-between">
+    <nav className="flex flex-col pb-4 sm:flex-row sm:pb-0 items-center gap-4 justify-between">
       <NavLinkLogo />
       <NavLinkList>
         <NavLinkListItem href="/weapons">Weapons</NavLinkListItem>
