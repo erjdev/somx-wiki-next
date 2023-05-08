@@ -506,6 +506,146 @@ const unsortedArmor: SomArmor[] = [
     },
     durability: 1250,
   },
+  {
+    id: "vwl", // 
+    name: "Viking War Leather",
+    description: "",
+    imageUrl: "/pictures/item220.png",
+    requiredStats: {
+      defense: 550,
+    },
+    durability: 1400,
+  },
+  {
+    id: "dpm", // 
+    name: "Dragon Platemail",
+    description: "",
+    imageUrl: "/pictures/item71.png",
+    requiredStats: {
+      defense: 550,
+    },
+    durability: 1400,
+  },
+  {
+    id: "aopi", // 
+    name: "Armor of Pure Insanity",
+    description: "",
+    imageUrl: "/pictures/item664.png",
+    requiredStats: {
+      defense: 555,
+    },
+    durability: 1400,
+  },
+  {
+    id: "aog", // 
+    name: "Armor of Glory",
+    description: "",
+    imageUrl: "/pictures/item646.png",
+    requiredStats: {
+      defense: 600,
+    },
+    durability: 1500,
+  },
+  {
+    id: "aog", // 
+    name: "Armor of Glory",
+    description: "",
+    imageUrl: "/pictures/item646.png",
+    requiredStats: {
+      defense: 600,
+    },
+    durability: 1500,
+  },
+  {
+    id: "vwlp", // 
+    name: "Viking War Leather+",
+    description: "",
+    imageUrl: "/pictures/item220.png",
+    requiredStats: {
+      defense: 650,
+    },
+    durability: 1650,
+  },
+  {
+    id: "dpmp", // 
+    name: "Dragon Platemail+",
+    description: "",
+    imageUrl: "/pictures/item71.png",
+    requiredStats: {
+      defense: 650,
+    },
+    durability: 1650,
+  },
+  {
+    id: "faog", // 
+    name: "Fortified Armor of Glory",
+    description: "",
+    imageUrl: "/pictures/item649.png",
+    requiredStats: {
+      defense: 650,
+    },
+    durability: 1650,
+  },
+  {
+    id: "defenders-cloak", // 
+    name: "Defender's Cloak",
+    description: "",
+    imageUrl: "/pictures/item206.png",
+    requiredStats: {
+      defense: 700,
+    },
+    durability: 1785,
+  },
+  {
+    id: "cloak-of-insanity", // 
+    name: "Cloak of Insanity",
+    description: "",
+    imageUrl: "/pictures/item68.png",
+    requiredStats: {
+      defense: 710,
+    },
+    durability: 1800,
+  },
+  {
+    id: "undead-dragon", // 
+    name: "Undead Dragon Armor",
+    description: "",
+    imageUrl: "/pictures/item213.png",
+    requiredStats: {
+      defense: 800,
+    },
+    durability: 1900,
+  },
+  {
+    id: "viking-battle", // 
+    name: "Viking Battle Armor",
+    description: "",
+    imageUrl: "/pictures/item528.png",
+    requiredStats: {
+      defense: 800,
+    },
+    durability: 1900,
+  },
+  {
+    id: "mal", // 
+    name: "Malificent Platemail",
+    description: "",
+    imageUrl: "/pictures/item533.png",
+    requiredStats: {
+      defense: 850,
+    },
+    durability: 1950,
+  },
+  {
+    id: "rmal", // 
+    name: "Reinforced Malificent Platemail",
+    description: "",
+    imageUrl: "/pictures/item533.png",
+    requiredStats: {
+      defense: 850,
+    },
+    durability: 3900,
+  },
 ];
 
 // Sorted by defense, then durability, then name
