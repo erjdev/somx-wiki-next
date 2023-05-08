@@ -27,7 +27,7 @@ const Navbar = () => {
 }
 
 const NavLinkList: React.FC<React.PropsWithChildren> = ({ children }) =>
-  <ul className="flex flex-wrap lg:flex-nowrap items-center gap-4 p-4 text-sm">
+  <ul className="flex flex-wrap lg:flex-nowrap items-center gap-4 p-4">
     {children}
   </ul>;
 
