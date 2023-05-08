@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: ['/pictures/bandana.png'],
   },
+  metadataBase: new URL('https://somx.wiki'),
 };
 
 export default function RootLayout({
