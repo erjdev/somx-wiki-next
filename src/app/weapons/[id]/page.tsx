@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 }
 
 async function getWeaponAsync(weaponId: string): Promise<SomWeapon> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/weapons/${weaponId}` /* ,{ next: { revalidate: 60 }} */);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/weapons/${weaponId}`, { next: { revalidate: 60 }});
   const resSomWeapon = (await res.json()) as unknown as SomWeapon;
   if (!resSomWeapon?.name) notFound();
   return resSomWeapon;

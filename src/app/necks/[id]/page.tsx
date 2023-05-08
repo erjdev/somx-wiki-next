@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 }
 
 async function getNeckAsync(id: string): Promise<SomNeck> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/necks/${id}` /* ,{ next: { revalidate: 60 }} */);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/necks/${id}`, { next: { revalidate: 60 }});
   const resSomNeck = (await res.json()) as unknown as SomNeck;
   if (!resSomNeck?.name) notFound();
   return resSomNeck;

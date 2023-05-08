@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 async function getHelmetsAsync(): Promise<SomHelmet[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/helmets` /* ,{ next: { revalidate: 60 }} */);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/helmets`, { next: { revalidate: 60 }});
   return (await res.json()) as unknown as SomHelmet[];
 }
 
