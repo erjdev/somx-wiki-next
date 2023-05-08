@@ -187,7 +187,7 @@ const unsortedArmor: SomArmor[] = [
     durability: 200,
   },
   {
-    id: "wolven-hide", // 70
+    id: "wolven-hide", // 139
     name: "Wolven Hide",
     description: "Popular in glacier these armors are often made from the hides of local wolves and are popular mainstays of the local guards.",
     imageUrl: "/pictures/item62.png",
@@ -197,7 +197,7 @@ const unsortedArmor: SomArmor[] = [
     durability: 200,
   },
   {
-    id: "wanderers-garb", // 139
+    id: "wanderers-garb", // 45
     name: "Wanderer's Garb",
     description: "A mysterious ill-constructed garb that was worn by a mysterious wanderer.",
     imageUrl: "/pictures/item24.png",
@@ -207,7 +207,7 @@ const unsortedArmor: SomArmor[] = [
     durability: 1,
   },
   {
-    id: "cos", // 
+    id: "cos", // 143
     name: "Cape of Shadows",
     description: "Typically worn by vampire hunters to aid them in thier unending quest.  These armors are highly prized in the vampire hunting profession",
     imageUrl: "/pictures/item208.png",
@@ -217,7 +217,7 @@ const unsortedArmor: SomArmor[] = [
     durability: 250,
   },
   {
-    id: "aom",
+    id: "aom", // 168
     name: "Armor of Might",
     description: "This armor is favored by the warrior denizens of the swamp.",
     imageUrl: "/pictures/item207.png",
@@ -227,7 +227,7 @@ const unsortedArmor: SomArmor[] = [
     durability: 300,
   },
   {
-    id: "crystal", // 
+    id: "crystal", // 55
     name: "Crystal Armor",
     description: "Hardened Crystals studded with diamond. Works as a strong defense and a visual assault.",
     imageUrl: "/pictures/item67.png",
@@ -237,7 +237,7 @@ const unsortedArmor: SomArmor[] = [
     durability: 235,
   },
   {
-    id: "aranaea-fabric", // 
+    id: "aranaea-fabric", // 1448
     name: "Aranaea Fabric",
     description: "A tough woven armor made by a dour inhabitant of the Deadlands.",
     imageUrl: "/pictures/item216.png",
@@ -247,7 +247,7 @@ const unsortedArmor: SomArmor[] = [
     durability: 235,
   },
   {
-    id: "skud-hide", // 
+    id: "skud-hide", // 704
     name: "Skud Hide",
     description: "Armor quickly fastened together from the body parts of a Skud Beserker.",
     imageUrl: "/pictures/item533.png",
@@ -257,7 +257,7 @@ const unsortedArmor: SomArmor[] = [
     durability: 250,
   },
   {
-    id: "tiger-hide", // 
+    id: "tiger-hide", // 226
     name: "Tiger Hide",
     description: "Interlocked claws and tough fiber provide the excellent protection this armor provides.",
     imageUrl: "/pictures/item215.png",
@@ -267,9 +267,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 350,
   },
   {
-    id: "zbp", // 
+    id: "zbp", // 216
     name: "Zodiac Breastplate",
-    description: "",
+    description: "An armor constructed by a master smith who loves rare gems. It has stylized zodiac symbols engraved on it.",
     imageUrl: "/pictures/item210.png",
     requiredStats: {
       defense: 140,
@@ -277,9 +277,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 350,
   },
   {
-    id: "griffon", // 
+    id: "griffon", // 221
     name: "Griffon Armor",
-    description: "",
+    description: "An armor commonly worn by griffons. It can be won from them or by proving you've killed enough of them to a glacier bounty officer.",
     imageUrl: "/pictures/item112.png",
     requiredStats: {
       defense: 148,
@@ -287,9 +287,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 350,
   },
   {
-    id: "mithril-plate", // 
+    id: "mithril-plate", // 227
     name: "Mithril Plate",
-    description: "",
+    description: "Made with rare metals in secret practices by master smiths",
     imageUrl: "/pictures/item21.png",
     requiredStats: {
       defense: 158,
@@ -297,9 +297,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 400,
   },
   {
-    id: "leather-battle-robe", // 
+    id: "leather-battle-robe", // 1603
     name: "Leather Battle Robe",
-    description: "",
+    description: "Generations of archers have steadily improved this armor",
     imageUrl: "/pictures/item116.png",
     requiredStats: {
       defense: 168,
@@ -307,9 +307,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 420,
   },
   {
-    id: "conquerers-platemail", // 
+    id: "conquerers-platemail", // 531
     name: "Conquerer's Platemail",
-    description: "",
+    description: "A well made armor orginally hailing from sky sector.",
     imageUrl: "/pictures/item20.png",
     requiredStats: {
       defense: 170,
@@ -317,9 +317,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 450,
   },
   {
-    id: "millenia-guard", // 
+    id: "millenia-guard", // 236
     name: "Millenia Guard",
-    description: "",
+    description: "Commonly worn by Rora defenders this armour is uncommonly hard to remove.",
     imageUrl: "/pictures/item17.png",
     requiredStats: {
       defense: 170,
@@ -327,9 +327,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 450,
   },
   {
-    id: "fused-bone-plate", // 
+    id: "fused-bone-plate", // 1451
     name: "Fused Bone Plate",
-    description: "",
+    description: "The brainchild of a necromancer this well made armor is popular among the denizens of Deadlands.",
     imageUrl: "/pictures/item16.png",
     requiredStats: {
       defense: 172,
@@ -337,9 +337,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 285,
   },
   {
-    id: "glacier-chest-plate", // 
+    id: "glacier-chest-plate", // 1079
     name: "Glacier Chest Plate",
-    description: "",
+    description: "The cold eminating from this armor requires a certain amount of skill to tolerate",
     imageUrl: "/pictures/item102.png",
     requiredStats: {
       defense: 180,
@@ -347,9 +347,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 450,
   },
   {
-    id: "scarlet-robe", // 
+    id: "scarlet-robe", // 161
     name: "Scarlet Robe",
-    description: "",
+    description: "Striking even from a distance this armor combines flair with protection.",
     imageUrl: "/pictures/item206.png",
     requiredStats: {
       defense: 185,
@@ -357,9 +357,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 450,
   },
   {
-    id: "verdant-faulds", // 
+    id: "verdant-faulds", // 1614
     name: "Verdant Faulds",
-    description: "",
+    description: "Imbued with the toxins and spores of Syn this armor pulses slowly as if alive.",
     imageUrl: "/pictures/item557.png",
     requiredStats: {
       defense: 185,
@@ -367,9 +367,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 470,
   },
   {
-    id: "scale", // 
+    id: "scale", // 611
     name: "Scale Armor",
-    description: "",
+    description: "An armor sold by an angry smith in Pealu. This armor protects you from damage that the world throws at you but, cannot protect you from the insults of others.",
     imageUrl: "/pictures/item71.png",
     requiredStats: {
       defense: 190,
@@ -377,9 +377,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 500,
   },
   {
-    id: "golden", // 
+    id: "golden", // 134
     name: "Golden Armor",
-    description: "",
+    description: "This rare armor shines with golden radiance.",
     imageUrl: "/pictures/item214.png",
     requiredStats: {
       defense: 200,
@@ -387,9 +387,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 265,
   },
   {
-    id: "aod", // 
+    id: "aod", // 955
     name: "Armor of Darkness",
-    description: "",
+    description: "This blackened and scorched armor is the toughest thing to come out of the dwarven forges.",
     imageUrl: "/pictures/item213.png",
     requiredStats: {
       defense: 210,
@@ -397,9 +397,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 550,
   },
   {
-    id: "cm", // 
+    id: "cm", // 294
     name: "Chaos Mantle",
-    description: "",
+    description: "A powerful mantle woven from the souls of the fallen, just as Death's own garb.",
     imageUrl: "/pictures/item205.png",
     requiredStats: {
       defense: 250,
@@ -407,9 +407,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 650,
   },
   {
-    id: "demonic-bloodmail", // 
+    id: "demonic-bloodmail", // 1500
     name: "Demonic Bloodmail",
-    description: "",
+    description: "Armor that was spawned from the beasts of darkness.",
     imageUrl: "/pictures/item528.png",
     requiredStats: {
       defense: 262,
@@ -417,9 +417,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 655,
   },
   {
-    id: "ccm", // 
+    id: "ccm", // 1569
     name: "Cold Chaos Mantle",
-    description: "",
+    description: "A powerful mantle that, much like Death's own garb, was woven from souls of the fallen. It has been enchanted with a powerful crystal coating that is as cold as Death's touch.",
     imageUrl: "/pictures/item528.png",
     requiredStats: {
       defense: 275,
@@ -427,9 +427,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 700,
   },
   {
-    id: "reptillian", // 
+    id: "reptillian", // 1615
     name: "Reptillian Armor",
-    description: "",
+    description: "The scales of this armor slide over each other easily providing a flexible armor with the toughness of a powerful reptile.",
     imageUrl: "/pictures/item18.png",
     requiredStats: {
       defense: 285,
@@ -437,9 +437,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 750,
   },
   {
-    id: "maze-prize", // 
+    id: "maze-prize", // 1247
     name: "Maze Prize Armor",
-    description: "",
+    description: "This simple looking armor is well designed with few flaws.",
     imageUrl: "/pictures/item68.png",
     requiredStats: {
       defense: 300,
@@ -447,9 +447,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 750,
   },
   {
-    id: "ohka-monk-garb", // 
+    id: "ohka-monk-garb", // 811
     name: "Ohka Monk Garb",
-    description: "",
+    description: "Brightly colored and free flowing this fabric is Chi blessed.",
     imageUrl: "/pictures/item219.png",
     requiredStats: {
       defense: 300,
@@ -457,9 +457,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 750,
   },
   {
-    id: "midnight-chestpiece", // 
+    id: "midnight-chestpiece", // 283
     name: "Midnight Chestpiece",
-    description: "",
+    description: "Typically only worn by elite members of the night serpents gang in Deadlands.",
     imageUrl: "/pictures/item674.png",
     requiredStats: {
       defense: 340,
@@ -467,9 +467,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 850,
   },
   {
-    id: "upgrade-maze-prize", // 
+    id: "upgrade-maze-prize", // 1259
     name: "Maze Prize Armor (Upgraded)",
-    description: "",
+    description: "The few flaws in the pervious armor are corrected in this version. It also actively repels armors of the same type.",
     imageUrl: "/pictures/item68.png",
     requiredStats: {
       defense: 375,
@@ -477,9 +477,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 900,
   },
   {
-    id: "armor-of-insanity", // 
+    id: "armor-of-insanity", // 518
     name: "Armor of Insanity",
-    description: "",
+    description: "Made with special material that is as tough and durable that symbolizes the endurance a player has been through to have reached the level they have.",
     imageUrl: "/pictures/item425.png",
     requiredStats: {
       defense: 400,
@@ -487,9 +487,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 1000,
   },
   {
-    id: "wdm", // 
+    id: "wdm", // 736
     name: "White Dragon's Mail",
-    description: "",
+    description: "Durable armor crafted from the nearly inpenetrable skin of the legendary white dragon.",
     imageUrl: "/pictures/item209.png",
     requiredStats: {
       defense: 425,
@@ -497,9 +497,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 1100,
   },
   {
-    id: "hha", // 
+    id: "hha", // 1546
     name: "Hylian Hero Armor",
-    description: "",
+    description: "A tunic worn by the mystic hero that has been magically endowed with protective charms making it very durable.",
     imageUrl: "/pictures/item526.png",
     requiredStats: {
       defense: 500,
@@ -507,9 +507,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 1250,
   },
   {
-    id: "vwl", // 
+    id: "vwl", // 2975
     name: "Viking War Leather",
-    description: "",
+    description: "The armor of choice for a seasoned Viking.",
     imageUrl: "/pictures/item220.png",
     requiredStats: {
       defense: 550,
@@ -517,9 +517,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 1400,
   },
   {
-    id: "dpm", // 
+    id: "dpm", // 2979
     name: "Dragon Platemail",
-    description: "",
+    description: "Forged by the ancestors of the Highlanders.",
     imageUrl: "/pictures/item71.png",
     requiredStats: {
       defense: 550,
@@ -527,9 +527,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 1400,
   },
   {
-    id: "aopi", // 
+    id: "aopi", // 827
     name: "Armor of Pure Insanity",
-    description: "",
+    description: "A magically fortified armor that can only be worn by those whose dedication borders on the purest of insanity.",
     imageUrl: "/pictures/item664.png",
     requiredStats: {
       defense: 555,
@@ -537,19 +537,9 @@ const unsortedArmor: SomArmor[] = [
     durability: 1400,
   },
   {
-    id: "aog", // 
+    id: "aog", // 1206
     name: "Armor of Glory",
-    description: "",
-    imageUrl: "/pictures/item646.png",
-    requiredStats: {
-      defense: 600,
-    },
-    durability: 1500,
-  },
-  {
-    id: "aog", // 
-    name: "Armor of Glory",
-    description: "",
+    description: "Glory to the wearer of this armor for they have slain many bandits.",
     imageUrl: "/pictures/item646.png",
     requiredStats: {
       defense: 600,
