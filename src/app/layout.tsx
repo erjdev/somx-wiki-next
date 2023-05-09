@@ -1,6 +1,6 @@
 import Navbar from '@/components/navbar'
 import './globals.css'
-import { Inter, Press_Start_2P } from 'next/font/google'
+import { Press_Start_2P } from 'next/font/google'
 import { Metadata } from 'next';
 
 const classicFont = Press_Start_2P({ 

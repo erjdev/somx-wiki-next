@@ -1,7 +1,7 @@
 import Boot from "@/components/boot";
+import BreadCrumb from "@/components/breadcrumb";
 import { SomBoot } from "../../../../somdata/types/item";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const boot = await getBootAsync(params.id);
@@ -22,15 +22,11 @@ async function getBootAsync(id: string): Promise<SomBoot> {
   return resSomBoot;
 }
 
-export default async function RingPage({ params }: { params: { id: string } }) {
+export default async function BootPage({ params }: { params: { id: string } }) {
   const boot = await getBootAsync(params.id);
   return (
     <div className="w-full flex flex-col gap-2">
-      <p className="flex space-x-2 items-center">
-        <Link href="/boots" className="underline-offset-2 decoration-blue-700 hover:underline">Boots</Link>
-        <span className="text-xs select-none">&gt;</span>
-        <Link href={`/boots/${boot.id}`} className="underline-offset-2 decoration-blue-700 hover:underline">{boot.name}</Link>
-      </p>
+      <BreadCrumb categoryId="boots" categoryName="Boots" itemId={boot.id} itemName={boot.name} />
       <div className="flex flex-col md:flex-row gap-4">
         <Boot boot={boot} />
         <div className="basis-full">

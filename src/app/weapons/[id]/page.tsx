@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { SomWeapon } from "../../../../somdata/types/item";
 import Weapon from "@/components/weapon";
 import Link from "next/link";
+import BreadCrumb from "@/components/breadcrumb";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const weapon = await getWeaponAsync(params.id);
@@ -26,11 +27,7 @@ export default async function WeaponPage({ params }: { params: { id: string } })
   const weapon = await getWeaponAsync(params.id);
   return (
     <div className="w-full flex flex-col gap-2">
-      <p className="flex space-x-2 items-center">
-        <Link href="/weapons" className="underline-offset-2 decoration-blue-700 hover:underline">Weapons</Link>
-        <span className="text-xs select-none">&gt;</span>
-        <Link href={`/weapons/${weapon.id}`} className="underline-offset-2 decoration-blue-700 hover:underline">{weapon.name}</Link>
-      </p>
+      <BreadCrumb categoryId="weapons" categoryName="Weapons" itemId={weapon.id} itemName={weapon.name} />
       <div className="flex flex-col md:flex-row gap-4">
         <Weapon weapon={weapon} />
         <div className="basis-full">

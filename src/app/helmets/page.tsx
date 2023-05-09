@@ -2,6 +2,7 @@ import Helmet from "@/components/helmet";
 import { SomHelmet } from "../../../somdata/types/item";
 import Link from "next/link";
 import { Metadata } from "next";
+import BreadCrumb from "@/components/breadcrumb";
 
 export const metadata: Metadata = {
   title: `SoMX Wiki - Helmets`,
@@ -16,10 +17,8 @@ async function getHelmetsAsync(): Promise<SomHelmet[]> {
 export default async function HelmetsPage() {
   const helmets = await getHelmetsAsync();
   return (
-    <div>
-      <p className="flex space-x-2 items-center p-4">
-        <Link href="/helmets" className="underline-offset-2 decoration-blue-700 hover:underline">Helmets</Link>
-      </p>
+    <div className="w-full flex flex-col gap-2">
+      <BreadCrumb categoryId="helmets" categoryName="Helmets" />
       <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         {helmets.map((helmet) => <Helmet helmet={helmet} key={helmet.name} showBenefits={false} />)}
       </div>

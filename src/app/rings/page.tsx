@@ -2,6 +2,7 @@ import Ring from "@/components/ring";
 import { SomRing } from "../../../somdata/types/item";
 import Link from "next/link";
 import { Metadata } from "next";
+import BreadCrumb from "@/components/breadcrumb";
 
 export const metadata: Metadata = {
   title: `SoMX Wiki - Rings`,
@@ -16,10 +17,8 @@ async function getRingsAsync(): Promise<SomRing[]> {
 export default async function RingsPage() {
   const rings = await getRingsAsync();
   return (
-    <div>
-      <p className="flex space-x-2 items-center p-4">
-        <Link href="/rings" className="underline-offset-2 decoration-blue-700 hover:underline">Rings</Link>
-      </p>
+    <div className="w-full flex flex-col gap-2">
+      <BreadCrumb categoryId="rings" categoryName="Rings" />
       <div className="w-full grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         {rings.map((ring) => <Ring ring={ring} key={ring.name} showBenefits={false} />)}
       </div>

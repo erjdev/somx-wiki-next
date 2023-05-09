@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { SomHelmet } from "../../../../somdata/types/item";
 import Helmet from "@/components/helmet";
 import Link from "next/link";
+import BreadCrumb from "@/components/breadcrumb";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const helmet = await getHelmetAsync(params.id);
@@ -26,11 +27,7 @@ export default async function HelmetPage({ params }: { params: { id: string } })
   const helmet = await getHelmetAsync(params.id);
   return (
     <div className="w-full flex flex-col gap-2">
-      <p className="flex space-x-2 items-center">
-        <Link href="/helmets" className="underline-offset-2 decoration-blue-700 hover:underline">Helmets</Link>
-        <span className="text-xs select-none">&gt;</span>
-        <Link href={`/helmets/${helmet.id}`} className="underline-offset-2 decoration-blue-700 hover:underline">{helmet.name}</Link>
-      </p>
+      <BreadCrumb categoryId="helmets" categoryName="Helmets" itemId={helmet.id} itemName={helmet.name} />
       <div className="flex flex-col md:flex-row gap-4">
         <Helmet helmet={helmet} />
         <div className="basis-full">

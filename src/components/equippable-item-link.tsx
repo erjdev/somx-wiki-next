@@ -22,7 +22,7 @@ const EquippableItemLink: React.FC<React.PropsWithChildren<{
       <div className="flex flex-row gap-3">
         {imageUrl && <img src={imageUrl} alt={name} className="flex-shrink-0 w-12 h-12" />}
         <div className="flex-grow flex flex-col gap-1">
-          <p className={`text-xl underline underline-offset-4 ${underlineAccentClass} group-hover:decoration-blue-400`}>{name}</p>
+          <p className={`text-base underline underline-offset-4 ${underlineAccentClass} group-hover:decoration-blue-400`}>{name}</p>
           <div className="flex flex-wrap justify-between italic font-light gap-4 items-center">
             {level && <p className="text-blue-400">Level {level}</p>}
           </div>
