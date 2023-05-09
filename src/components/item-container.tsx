@@ -6,7 +6,7 @@ export type ItemContainerProps = {
 
 const ItemContainer: React.FC<React.PropsWithChildren<ItemContainerProps>> = ({className = '', children}) => {
   return (
-    <div className={`flex flex-col basis-full p-4 gap-3 max-w-xl rounded-lg border-2 ${className}`}>
+    <div className={`flex flex-col basis-full p-4 gap-3 max-w-xl rounded-lg border-2 text-xs ${className}`}>
       {children}
     </div>
   )

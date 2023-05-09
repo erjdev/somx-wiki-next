@@ -1,9 +1,13 @@
 import Navbar from '@/components/navbar'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Press_Start_2P } from 'next/font/google'
 import { Metadata } from 'next';
 
-const inter = Inter({ subsets: ['latin'] })
+const classicFont = Press_Start_2P({ 
+  subsets: ['latin'],
+  weight: "400",
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'SoMX Wiki',
@@ -21,8 +25,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-950 text-slate-50`}>
-        <div className="min-h-screen flex flex-col max-w-7xl mx-auto">
+      <body className={`${classicFont.className} bg-slate-950 text-slate-50`}>
+        <div className="min-h-screen flex flex-col max-w-7xl mx-auto gap-12">
           <Navbar />
           <main className="flex-grow flex flex-col items-center justify-between px-8 pb-8">
             {children}

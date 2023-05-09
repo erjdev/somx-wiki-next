@@ -10,20 +10,17 @@ const Ring: React.FC<{ ring: SomRing, showBenefits?: boolean }> = ({ ring, showB
 
   return (
     <ItemContainer className="border-blue-900">
-      <EquippableItemLink href={`/rings/${ring.id}`}>
-        <img className="w-12 h-12" src={ring.imageUrl} alt={ring.name} />
-        <div className="flex-grow flex flex-col gap-1">
-          <p className="text-xl underline underline-offset-4 decoration-blue-700">{ring.name}</p>
-          <div className="flex flex-wrap justify-between italic font-light gap-x-2 gap-y-1 items-center text-sm">
-            {ring.requiredStats?.level && <p className="opacity-80 p-1 pl-0">Level {ring.requiredStats?.level}</p>}
-            <div className="flex gap-2 flex-wrap">
-              {ring.unique && <p className="rounded-full bg-slate-800 px-3 tracking-wider text-sm opacity-80">Unique</p>}
-              {ring.bindOnEquip && <p className="rounded-full bg-red-800 px-3 tracking-wider text-sm opacity-80">BoE</p>}
-              {ring.bindOnPickup && <p className="rounded-full bg-red-800 px-3 tracking-wider text-sm opacity-80">BoP</p>}
-              {ring.showsHealth && <p className="rounded-full bg-blue-600 px-3 tracking-wider text-sm opacity-80">Oracle</p>}
-            </div>
-          </div>
-        </div>
+      <EquippableItemLink
+        href={`/rings/${ring.id}`}
+        name={ring.name}
+        level={ring.requiredStats?.level}
+        imageUrl={ring.imageUrl}
+        underlineAccentClass='decoration-blue-700'
+      >
+        {ring.unique && <p className="rounded-full bg-slate-800 px-3 tracking-wider opacity-80">Unique</p>}
+        {ring.bindOnEquip && <p className="rounded-full bg-red-800 px-3 tracking-wider opacity-80">BoE</p>}
+        {ring.bindOnPickup && <p className="rounded-full bg-red-800 px-3 tracking-wider opacity-80">BoP</p>}
+        {ring.showsHealth && <p className="rounded-full bg-blue-600 px-3 tracking-wider opacity-80">Oracle</p>}
       </EquippableItemLink>
 
       <EquippableItemDetails {...ring} showBenefits={showBenefits} />

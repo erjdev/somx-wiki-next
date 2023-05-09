@@ -30,7 +30,7 @@ export const StatBonuses = ({ statBlock }: { statBlock: SomStats }) => {
         <p className="text-md tracking-wide opacity-80">Bonuses / Penalties</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-1 text-sm">
+      <div className="grid grid-cols-2 gap-1">
         {statBlock.health && (
           <>
             <p className={`flex items-center gap-4 ${statBlock.health > 0 ? positiveColorClass : negativeColorClass}`}>
