@@ -846,7 +846,7 @@ const unsortedWeapons: SomWeapon[] = [
     id: "sow-mk-vi", // 1028
     name: "Sword of Worth MK VI",
     description: "A sword forged by a devil of a parallel dimension. You can feel the power surging through your body while you grip it.",
-    imageUrl: "/pictures/item.png",
+    imageUrl: "/pictures/item563.png",
     requiredStats: {
       level: 500,
       strength: 810,

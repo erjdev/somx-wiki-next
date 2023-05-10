@@ -24,11 +24,11 @@ const EquippableItemLink: React.FC<React.PropsWithChildren<{
         <div className="flex-grow flex flex-col gap-1">
           <p className={`text-base underline underline-offset-4 ${underlineAccentClass} group-hover:decoration-blue-400`}>{name}</p>
           <div className="flex flex-wrap justify-between italic font-light gap-4 items-center">
-            {level && <p className="text-blue-400">Level {level}</p>}
+            {level && <p className="text-blue-400 text-xs">Level {level}</p>}
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center items-center">
+      <div className="flex flex-wrap px-2 gap-x-4 gap-y-2 justify-center items-center">
         {children}
       </div>
     </Link>

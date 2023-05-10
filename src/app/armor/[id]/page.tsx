@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { SomArmor } from "../../../../somdata/types/item";
 import Armor from "@/components/armor";
 import BreadCrumb from "@/components/breadcrumb";
+import MoreDetailsWrapper from "@/components/more-details-wrapper";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const armor = await getArmorAsync(params.id);
@@ -25,7 +26,7 @@ async function getArmorAsync(id: string): Promise<SomArmor> {
 export default async function ArmorPage({ params }: { params: { id: string } }) {
   const armor = await getArmorAsync(params.id);
   return (
-    <div className="w-full flex flex-col gap-2">
+    <MoreDetailsWrapper>
       <BreadCrumb categoryId="armor" categoryName="Armor" itemId={armor.id} itemName={armor.name} />
       <div className="flex flex-col md:flex-row gap-4">
         <Armor armor={armor} />
@@ -33,6 +34,6 @@ export default async function ArmorPage({ params }: { params: { id: string } }) 
           More details...
         </div>
       </div>
-    </div>
+    </MoreDetailsWrapper>
   );
 }

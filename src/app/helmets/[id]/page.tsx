@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { SomHelmet } from "../../../../somdata/types/item";
 import Helmet from "@/components/helmet";
 import BreadCrumb from "@/components/breadcrumb";
+import MoreDetailsWrapper from "@/components/more-details-wrapper";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const helmet = await getHelmetAsync(params.id);
@@ -25,7 +26,7 @@ async function getHelmetAsync(id: string): Promise<SomHelmet> {
 export default async function HelmetPage({ params }: { params: { id: string } }) {
   const helmet = await getHelmetAsync(params.id);
   return (
-    <div className="w-full flex flex-col gap-2">
+    <MoreDetailsWrapper>
       <BreadCrumb categoryId="helmets" categoryName="Helmets" itemId={helmet.id} itemName={helmet.name} />
       <div className="flex flex-col md:flex-row gap-4">
         <Helmet helmet={helmet} />
@@ -33,6 +34,6 @@ export default async function HelmetPage({ params }: { params: { id: string } })
           More details...
         </div>
       </div>
-    </div>
+    </MoreDetailsWrapper>
   );
 }

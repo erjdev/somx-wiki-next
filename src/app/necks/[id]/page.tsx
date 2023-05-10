@@ -3,6 +3,7 @@ import { SomNeck } from "../../../../somdata/types/item";
 import Neck from "@/components/neck";
 import { Metadata } from "next";
 import BreadCrumb from "@/components/breadcrumb";
+import MoreDetailsWrapper from "@/components/more-details-wrapper";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const neck = await getNeckAsync(params.id);
@@ -28,7 +29,7 @@ async function getNeckAsync(id: string): Promise<SomNeck> {
 export default async function NeckPage({ params }: { params: { id: string } }) {
   const neck = await getNeckAsync(params.id);
   return (
-    <div className="w-full flex flex-col gap-2">
+    <MoreDetailsWrapper>
       <BreadCrumb categoryId="necks" categoryName="Necks" itemId={neck.id} itemName={neck.name} />
       <div className="flex flex-col md:flex-row gap-2">
         <Neck neck={neck} />
@@ -36,6 +37,6 @@ export default async function NeckPage({ params }: { params: { id: string } }) {
           More details...
         </div>
       </div>
-    </div>
+    </MoreDetailsWrapper>
   )
 }

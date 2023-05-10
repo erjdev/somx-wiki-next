@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
 import ItemContainer from './item-container';
-import { ItemStatus } from './item-status';
+import ItemStatus from './item-status';
 
 const Shield: React.FC<{ shield: SomShield, showBenefits?: boolean }> = ({ shield, showBenefits = true }) => {
   if (!shield) {

@@ -2,6 +2,7 @@ import BreadCrumb from "@/components/breadcrumb";
 import { SomRing } from "../../../../somdata/types/item";
 import Ring from "@/components/ring";
 import { notFound } from "next/navigation";
+import MoreDetailsWrapper from "@/components/more-details-wrapper";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const ring = await getRingAsync(params.id);
@@ -25,7 +26,7 @@ async function getRingAsync(ringId: string): Promise<SomRing> {
 export default async function RingPage({ params }: { params: { id: string } }) {
   const ring = await getRingAsync(params.id);
   return (
-    <div className="w-full flex flex-col gap-2">
+    <MoreDetailsWrapper>
       <BreadCrumb categoryId="rings" categoryName="Rings" itemId={ring.id} itemName={ring.name} />
       <div className="flex flex-col md:flex-row gap-4">
         <Ring ring={ring} />
@@ -33,6 +34,6 @@ export default async function RingPage({ params }: { params: { id: string } }) {
           More details...
         </div>
       </div>
-    </div>
+    </MoreDetailsWrapper>
   );
 }

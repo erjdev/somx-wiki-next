@@ -11,9 +11,14 @@ export type SomEquippableItemBase = SomObject & {
   bindOnPickup?: boolean;
   unique?: boolean;
 
+  howToObtainMarkdown?: string;
+
   // Related items, npcs, quests, etc are referenced by id and type
   // such that we know which area to link to and under what id
-  related?: { id: string; type: string; }[];
+  related?: {
+    id: string;
+    type: "weapons" | "boots" | "armor" | "helmets" | "shields" | "rings" | "necks" | "npcs" | "quests";
+  }[];
 }
 
 export type SomArmor = SomEquippableItemBase;

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { SomWeapon } from "../../../../somdata/types/item";
 import Weapon from "@/components/weapon";
 import BreadCrumb from "@/components/breadcrumb";
+import MoreDetailsWrapper from "@/components/more-details-wrapper";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const weapon = await getWeaponAsync(params.id);
@@ -25,7 +26,7 @@ async function getWeaponAsync(weaponId: string): Promise<SomWeapon> {
 export default async function WeaponPage({ params }: { params: { id: string } }) {
   const weapon = await getWeaponAsync(params.id);
   return (
-    <div className="w-full flex flex-col gap-2">
+    <MoreDetailsWrapper>
       <BreadCrumb categoryId="weapons" categoryName="Weapons" itemId={weapon.id} itemName={weapon.name} />
       <div className="flex flex-col md:flex-row gap-4">
         <Weapon weapon={weapon} />
@@ -33,6 +34,6 @@ export default async function WeaponPage({ params }: { params: { id: string } })
           More details...
         </div>
       </div>
-    </div>
+    </MoreDetailsWrapper>
   );
 }

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { SomShield } from "../../../../somdata/types/item";
 import Shield from "@/components/shield";
 import BreadCrumb from "@/components/breadcrumb";
+import MoreDetailsWrapper from "@/components/more-details-wrapper";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const shield = await getShieldAsync(params.id);
@@ -25,7 +26,7 @@ async function getShieldAsync(id: string): Promise<SomShield> {
 export default async function ShieldPage({ params }: { params: { id: string } }) {
   const shield = await getShieldAsync(params.id);
   return (
-    <div className="w-full flex flex-col gap-2">
+    <MoreDetailsWrapper>
       <BreadCrumb categoryId="shields" categoryName="Shields" itemId={shield.id} itemName={shield.name} />
       <div className="flex flex-col md:flex-row gap-4">
         <Shield shield={shield} />
@@ -33,6 +34,6 @@ export default async function ShieldPage({ params }: { params: { id: string } })
           More details...
         </div>
       </div>
-    </div>
+    </MoreDetailsWrapper>
   );
 }
