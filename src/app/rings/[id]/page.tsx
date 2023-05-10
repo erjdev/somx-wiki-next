@@ -1,7 +1,6 @@
 import BreadCrumb from "@/components/breadcrumb";
 import { SomRing } from "../../../../somdata/types/item";
 import Ring from "@/components/ring";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {

@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { SomArmor } from "../../../../somdata/types/item";
 import Armor from "@/components/armor";
-import Link from "next/link";
 import BreadCrumb from "@/components/breadcrumb";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {

@@ -1,7 +1,5 @@
-import { notFound } from "next/navigation";
 import { SomWeapon } from "../../../somdata/types/item";
 import Weapon from "@/components/weapon";
-import Link from "next/link";
 import { Metadata } from "next";
 import BreadCrumb from "@/components/breadcrumb";
 

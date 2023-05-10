@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SomShield } from "../../../somdata/types/item";
 import Shield from "@/components/shield";
 import { Metadata } from "next";

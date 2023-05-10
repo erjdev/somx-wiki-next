@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
 import ItemContainer from './item-container';
+import { ItemStatus } from './item-status';
 
 const Helmet: React.FC<{ helmet: SomHelmet, showBenefits?: boolean }> = ({ helmet, showBenefits = true }) => {
   if (!helmet) {
@@ -21,6 +22,7 @@ const Helmet: React.FC<{ helmet: SomHelmet, showBenefits?: boolean }> = ({ helme
       >
         {helmet.requiredStats?.speed && <p className="text-amber-500">{helmet.requiredStats?.speed} Speed</p>}
         {helmet.durability && helmet.durability > 0 && <p className="text-gray-300">{helmet.durability} Durability</p>}
+        <ItemStatus {...helmet} />
       </EquippableItemLink>
 
       <EquippableItemDetails {...helmet} showBenefits={showBenefits} />

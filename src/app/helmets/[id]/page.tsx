@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { SomHelmet } from "../../../../somdata/types/item";
 import Helmet from "@/components/helmet";
-import Link from "next/link";
 import BreadCrumb from "@/components/breadcrumb";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {

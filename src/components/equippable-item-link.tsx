@@ -28,7 +28,7 @@ const EquippableItemLink: React.FC<React.PropsWithChildren<{
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap gap-x-4 justify-center items-center">
+      <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center items-center">
         {children}
       </div>
     </Link>

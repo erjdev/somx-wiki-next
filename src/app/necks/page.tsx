@@ -1,6 +1,5 @@
 import Neck from "@/components/neck";
 import { SomNeck } from "../../../somdata/types/item";
-import Link from "next/link";
 import { Metadata } from "next";
 import BreadCrumb from "@/components/breadcrumb";
 

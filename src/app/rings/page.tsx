@@ -1,6 +1,5 @@
 import Ring from "@/components/ring";
 import { SomRing } from "../../../somdata/types/item";
-import Link from "next/link";
 import { Metadata } from "next";
 import BreadCrumb from "@/components/breadcrumb";
 

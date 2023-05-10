@@ -1,10 +1,10 @@
 import React from 'react';
 import { SomNeck } from '../../somdata/types/item';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import EquippableItemDetails from './equippable-item-details';
 import EquippableItemLink from './equippable-item-link';
 import ItemContainer from './item-container';
+import ItemStatus from './item-status';
 
 const Neck: React.FC<{ neck: SomNeck, showBenefits?: boolean }> = ({ neck, showBenefits = true }) => {
   if (!neck) notFound();
@@ -18,12 +18,8 @@ const Neck: React.FC<{ neck: SomNeck, showBenefits?: boolean }> = ({ neck, showB
         imageUrl={neck.imageUrl}
         underlineAccentClass='decoration-blue-700'
       >
-        {neck.unique && <p className="rounded-full bg-slate-800 px-3 tracking-wider opacity-80">Unique</p>}
-        {neck.bindOnEquip && <p className="rounded-full bg-red-800 px-3 tracking-wider opacity-80">BoE</p>}
-        {neck.bindOnPickup && <p className="rounded-full bg-red-800 px-3 tracking-wider opacity-80">BoP</p>}
-        {neck.showsHealth && <p className="rounded-full bg-blue-600 px-3 tracking-wider opacity-80">Oracle</p>}
+        <ItemStatus {...neck} />
       </EquippableItemLink>
-
       <EquippableItemDetails {...neck} showBenefits={showBenefits} />
     </ItemContainer>
   );

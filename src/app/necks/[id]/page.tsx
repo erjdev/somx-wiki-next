@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation";
 import { SomNeck } from "../../../../somdata/types/item";
 import Neck from "@/components/neck";
-import Link from "next/link";
-import { OpenGraph } from "next/dist/lib/metadata/types/opengraph-types";
 import { Metadata } from "next";
 import BreadCrumb from "@/components/breadcrumb";
 
